@@ -1,0 +1,4 @@
+{"iter":0,"total":5,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+{"iter":5,"total":5,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"exporting"}
+{"iter":5,"total":5,"splats":2153,"loss":0.36363867,"elapsed_ms":1872,"eta_sec":0.0,"stage":"training"}
+{"iter":5,"total":5,"splats":2153,"loss":0.36363867,"elapsed_ms":1872,"eta_sec":0.0,"stage":"done"}

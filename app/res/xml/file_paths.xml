@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 分享 HTML 对外暴露的路径声明：只开放 cacheDir/shared/ 一个目录。
+     不要加 root-path / external-path 之类的宽泛条目——那等于把整个私有目录开放给接收方应用。
+
+     注意：当前用的是自带的 ShareFileProvider（工程无 androidx，见 build/javac_step.ps1），
+     它把允许范围写死在 ShareFileProvider.SUBDIR 里，不读这个文件。
+     保留本文件是为了把这个「只暴露 shared/」的约定落在配置里，
+     将来若引入 androidx FileProvider，manifest 换成 androidx 类 + @xml/file_paths 即可直接复用。 -->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <cache-path name="shared" path="shared/" />
+</paths>

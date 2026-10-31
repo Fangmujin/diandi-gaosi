@@ -1,0 +1,53 @@
+[package]
+name = "brush-headless"
+edition.workspace = true
+version.workspace = true
+readme.workspace = true
+license.workspace = true
+
+# Built as a regular executable; the Android build renames the result to
+# libbrushheadless.so so it can be shipped in the APK's jniLibs and exec'd
+# through ProcessBuilder.
+[[bin]]
+name = "brush_headless"
+path = "src/main.rs"
+
+[dependencies]
+# No rerun.io SDK: the trainer runs headless on a phone and must stay small.
+brush-process = { path = "../brush-process", default-features = false }
+brush-dataset.path = "../brush-dataset"
+brush-render.path = "../brush-render"
+brush-vfs.path = "../brush-vfs"
+
+anyhow.workspace = true
+clap.workspace = true
+env_logger.workspace = true
+log.workspace = true
+serde.workspace = true
+serde_json = { workspace = true, features = ["std"] }
+web-time.workspace = true
+
+burn.workspace = true
+tokio = { workspace = true, features = [
+    "io-util",
+    "rt",
+    "rt-multi-thread",
+    "time",
+] }
+tokio-stream.workspace = true
+
+# Graphics backend selection, mirroring brush-app.
+[target.'cfg(target_family = "unix")'.dependencies]
+wgpu = { workspace = true, features = ["vulkan"] }
+
+[target.'cfg(target_os = "android")'.dependencies]
+wgpu = { workspace = true, features = ["vulkan"] }
+
+[target.'cfg(target_family = "windows")'.dependencies]
+wgpu = { workspace = true, features = ["vulkan"] }
+
+[package.metadata.cargo-shear]
+ignored = ["wgpu"] # Need manual backend selection.
+
+[lints]
+workspace = true

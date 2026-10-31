@@ -1,0 +1,63 @@
+/* Design tokens v0.1 — 唯一色值来源，组件内禁止硬编码颜色 */
+:root {
+  /* 基础 */
+  --bg: #0D1117;
+  --card: #161F2A;
+  --fg: #E6EDF3;
+  --muted: #8B949E;
+  --accent: #34D399;
+  --accent-strong: #10B981;
+  --border: #2A3441;
+
+  /* 语义 */
+  --success: #3FB950;
+  --warn: #D29922;
+  --error: #F85149;
+
+  /* 派生（只能由上面几项推导，不新增色相） */
+  --card-hi: #1B2531;
+  --accent-dim: rgba(52, 211, 153, 0.12);
+  --accent-dim-2: rgba(52, 211, 153, 0.22);
+  --error-dim: rgba(248, 81, 73, 0.12);
+  --warn-dim: rgba(210, 153, 34, 0.12);
+  --success-dim: rgba(63, 185, 80, 0.12);
+  --scrim: rgba(13, 17, 23, 0.72);
+  --overlay: rgba(13, 17, 23, 0.86);
+  --skeleton: rgba(139, 148, 158, 0.14);
+
+  /* 圆角 */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-pill: 999px;
+
+  /* 间距 */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+  --s7: 32px;
+
+  /* 字号 */
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-32: 32px;
+
+  /* 字体 */
+  --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", "Roboto Mono", Menlo, Consolas, monospace;
+
+  /* 动效 */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --dur: 180ms;
+
+  /* 尺寸 */
+  --touch: 44px;
+  --tabbar-h: 56px;
+}

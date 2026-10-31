@@ -1,0 +1,19 @@
+[target.wasm32-unknown-unknown]
+rustflags = ['--cfg', 'getrandom_backend="wasm_js"']
+runner = 'wasm-bindgen-test-runner'
+
+# Android 15+ devices can use 16KB memory pages. Executables shipped as
+# lib*.so and exec'd via ProcessBuilder must be 16KB aligned or they fail to
+# load on those devices.
+# APK size reduction (Oct 2026). Target-scoped on purpose: these never touch
+# host build scripts (see the note in Cargo.toml).
+#   opt-level=z   - size over speed; Rust does not do fast-math, so IEEE-754
+#                    semantics are preserved (cubecl kernels are JIT'd anyway).
+#   panic=abort   - drops .eh_frame + .gcc_except_table (~6.3MB). Safe here:
+#                    brush_headless is a [[bin]] exec'd via ProcessBuilder, and
+#                    no crate in the tree uses catch_unwind.
+[target.aarch64-linux-android]
+rustflags = ["-C", "link-arg=-Wl,-z,max-page-size=16384", "-C", "opt-level=z", "-C", "panic=abort"]
+
+[target.x86_64-linux-android]
+rustflags = ["-C", "link-arg=-Wl,-z,max-page-size=16384", "-C", "opt-level=z", "-C", "panic=abort"]

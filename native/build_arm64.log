@@ -1,0 +1,1145 @@
+=== brush-headless build aarch64-linux-android ===
+   Compiling cfg-if v1.0.3
+   Compiling serde_core v1.0.221
+   Compiling libc v0.2.175
+   Compiling serde v1.0.221
+   Compiling pin-project-lite v0.2.16
+   Compiling libm v0.2.15
+   Compiling num-traits v0.2.19
+   Compiling futures-core v0.3.31
+   Compiling bitflags v2.9.4
+   Compiling log v0.4.28
+   Compiling once_cell v1.21.3
+   Compiling bytemuck v1.23.2
+   Compiling thiserror v2.0.16
+   Compiling allocator-api2 v0.2.21
+   Compiling foldhash v0.1.5
+   Compiling equivalent v1.0.2
+   Compiling hashbrown v0.15.5
+   Compiling zerocopy v0.8.27
+   Compiling itoa v1.0.15
+   Compiling memchr v2.7.5
+   Compiling crossbeam-utils v0.8.21
+   Compiling half v2.6.0
+   Compiling lock_api v0.4.13
+   Compiling fnv v1.0.7
+   Compiling scopeguard v1.2.0
+   Compiling futures-io v0.3.31
+   Compiling parking v2.2.1
+   Compiling getrandom v0.3.3
+   Compiling smallvec v1.15.1
+   Compiling rand_core v0.9.3
+   Compiling ppv-lite86 v0.2.21
+   Compiling fastrand v2.3.0
+   Compiling unicode-ident v1.0.19
+   Compiling portable-atomic v1.11.1
+   Compiling futures-lite v2.6.1
+   Compiling rand_chacha v0.9.0
+   Compiling rand v0.9.2
+   Compiling ryu v1.0.20
+   Compiling cubecl-common v0.7.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-common)
+   Compiling spin v0.10.0
+   Compiling derive_more v2.0.1
+   Compiling concurrent-queue v2.5.0
+   Compiling float8 v0.4.2
+   Compiling serde_bytes v0.11.18
+   Compiling embassy-futures v0.1.2
+   Compiling web-time v1.1.0
+   Compiling float4 v0.1.0
+   Compiling event-listener v5.4.1
+   Compiling option-ext v0.2.0
+   Compiling winnow v0.7.13
+   Compiling serde_json v1.0.145
+   Compiling dirs-sys v0.5.0
+   Compiling toml_parser v1.0.2
+   Compiling event-listener-strategy v0.5.4
+   Compiling serde_spanned v1.0.0
+   Compiling toml_datetime v0.7.0
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime\build.rs:5:5
+   |
+ 5 | /     cfg_aliases! {
+ 6 | |         // Some features like autotune caching, compilation caching, and config loading rely on files/environment variables,
+ 7 | |         // which are only applicable on "standard desktop platforms".
+ 8 | |         std_io: { all(feature = "std", any(target_os = "windows", target_os = "linux", target_os = "macos")) },
+ 9 | |         exclusive_memory_only: { any(feature = "exclusive-memory-only", target_family = "wasm") },
+10 | |         multi_threading: { all(feature = "std", not(target_family = "wasm")) },
+11 | |     }
+   | |_____^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: `#[warn(semicolon_in_expressions_from_non_local_macros)]` (part of `#[warn(future_incompatible)]`) on by default
+   = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime\build.rs:5:5
+   |
+ 5 | /     cfg_aliases! {
+ 6 | |         // Some features like autotune caching, compilation caching, and config loading rely on files/environment variables,
+ 7 | |         // which are only applicable on "standard desktop platforms".
+ 8 | |         std_io: { all(feature = "std", any(target_os = "windows", target_os = "linux", target_os = "macos")) },
+ 9 | |         exclusive_memory_only: { any(feature = "exclusive-memory-only", target_family = "wasm") },
+10 | |         multi_threading: { all(feature = "std", not(target_family = "wasm")) },
+11 | |     }
+   | |_____^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: `cubecl-runtime` (build script) generated 34 warnings (32 duplicates)
+   Compiling toml_writer v1.0.2
+   Compiling float-ord v0.3.2
+   Compiling cubecl-ir v0.7.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-ir)
+   Compiling toml v0.9.5
+   Compiling cubecl-runtime v0.7.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime)
+   Compiling async-channel v2.5.0
+   Compiling dirs v6.0.0
+   Compiling android_system_properties v0.1.5
+   Compiling jni-sys v0.3.0
+warning: unused variable: `inputs`
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime\src\tune\tuner.rs:194:9
+    |
+194 |         inputs: &In,
+    |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_inputs`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `client`
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime\src\tune\tuner.rs:196:9
+    |
+196 |         client: &ComputeClient<S, C>,
+    |         ^^^^^^ help: if this is intentional, prefix it with an underscore: `_client`
+
+warning: struct `TunePlan` is never constructed
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime\src\tune\base.rs:69:19
+   |
+69 | pub(crate) struct TunePlan {
+   |                   ^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: struct `GroupPlan` is never constructed
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime\src\tune\base.rs:76:8
+   |
+76 | struct GroupPlan {
+   |        ^^^^^^^^^
+
+warning: struct `Cleanup` is never constructed
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime\src\tune\base.rs:81:8
+   |
+81 | struct Cleanup {
+   |        ^^^^^^^
+
+warning: associated items `new`, `next`, `cleanup`, and `group_plan_next` are never used
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime\src\tune\base.rs:87:12
+    |
+ 86 | impl TunePlan {
+    | ------------- associated items in this implementation
+ 87 |     pub fn new<K: AutotuneKey, In, Out>(key: &K, tunables: &[Tunable<K, In, Out>]) -> Self {
+    |            ^^^
+...
+142 |     pub(crate) fn next(&mut self) -> Vec<usize> {
+    |                   ^^^^
+...
+158 |     fn cleanup(&mut self, cleanup: Cleanup) {
+    |        ^^^^^^^
+...
+185 |     fn group_plan_next(&mut self, priority: u8) -> (Vec<usize>, Cleanup) {
+    |        ^^^^^^^^^^^^^^^
+
+warning: method `plan` is never used
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime\src\tune\operation.rs:88:19
+   |
+39 | / impl<K: AutotuneKey, Inputs: Clone + Send + 'static, Output: 'static>
+40 | |     TunableSet<K, Inputs, Output>
+   | |_________________________________- method in this implementation
+...
+88 |       pub(crate) fn plan(&self, key: &K) -> TunePlan {
+   |                     ^^^^
+
+warning: associated functions `generate_tune_message`, `execute_tune_plan`, and `process_autotune` are never used
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime\src\tune\tuner.rs:228:14
+    |
+ 81 | impl<K: AutotuneKey> Tuner<K> {
+    | ----------------------------- associated functions in this implementation
+...
+228 |     async fn generate_tune_message<
+    |              ^^^^^^^^^^^^^^^^^^^^^
+...
+274 |     async fn execute_tune_plan<
+    |              ^^^^^^^^^^^^^^^^^
+...
+328 |     async fn process_autotune(
+    |              ^^^^^^^^^^^^^^^^
+
+warning: enum `BinaryLogLevel` is never used
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-runtime\src\config\logger.rs:343:10
+    |
+343 | pub enum BinaryLogLevel {
+    |          ^^^^^^^^^^^^^^
+
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\build.rs:2:5
+   |
+ 2 | /     cfg_aliases::cfg_aliases! {
+ 3 | |         dot_out: { feature = "dot-out" },
+ 4 | |         glsl_out: { feature = "glsl-out" },
+ 5 | |         hlsl_out: { any(feature = "hlsl-out", all(target_os = "windows", feature = "hlsl-out-if-target-windows")) },
+...  |
+10 | |         no_std: { not(std) },
+11 | |     }
+   | |_____^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: `#[warn(semicolon_in_expressions_from_non_local_macros)]` (part of `#[warn(future_incompatible)]`) on by default
+   = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases::cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\build.rs:2:5
+   |
+ 2 | /     cfg_aliases::cfg_aliases! {
+ 3 | |         dot_out: { feature = "dot-out" },
+ 4 | |         glsl_out: { feature = "glsl-out" },
+ 5 | |         hlsl_out: { any(feature = "hlsl-out", all(target_os = "windows", feature = "hlsl-out-if-target-windows")) },
+...  |
+10 | |         no_std: { not(std) },
+11 | |     }
+   | |_____^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases::cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: `naga` (build script) generated 58 warnings (56 duplicates)
+   Compiling bit-vec v0.8.0
+   Compiling unicode-width v0.2.0
+   Compiling termcolor v1.4.1
+   Compiling codespan-reporting v0.12.0
+   Compiling bit-set v0.8.0
+warning: `cubecl-runtime` (lib) generated 9 warnings (run `cargo fix --lib -p cubecl-runtime` to apply 2 suggestions)
+   Compiling naga v26.0.2 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga)
+   Compiling cubecl-core v0.7.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core)
+   Compiling indexmap v2.11.1
+warning: use of deprecated constant `std::f32::INFINITY`: replaced by the `INFINITY` associated constant on `f32`
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\element\float\typemap.rs:259:54
+    |
+259 |     const INFINITY: Self = ElemExpand::from_f32(f32::INFINITY);
+    |                                                      ^^^^^^^^
+    |
+    = note: `#[warn(deprecated)]` on by default
+
+warning: use of deprecated constant `std::f32::MANTISSA_DIGITS`: replaced by the `MANTISSA_DIGITS` associated constant on `f32`
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\element\float\typemap.rs:261:39
+    |
+261 |     const MANTISSA_DIGITS: u32 = f32::MANTISSA_DIGITS;
+    |                                       ^^^^^^^^^^^^^^^
+
+warning: use of deprecated constant `std::f32::MAX_10_EXP`: replaced by the `MAX_10_EXP` associated constant on `f32`
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\element\float\typemap.rs:264:34
+    |
+264 |     const MAX_10_EXP: i32 = f32::MAX_10_EXP;
+    |                                  ^^^^^^^^^^
+
+warning: use of deprecated constant `std::f32::MAX_EXP`: replaced by the `MAX_EXP` associated constant on `f32`
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\element\float\typemap.rs:266:31
+    |
+266 |     const MAX_EXP: i32 = f32::MAX_EXP;
+    |                               ^^^^^^^
+
+warning: use of deprecated constant `std::f32::MIN_10_EXP`: replaced by the `MIN_10_EXP` associated constant on `f32`
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\element\float\typemap.rs:269:34
+    |
+269 |     const MIN_10_EXP: i32 = f32::MIN_10_EXP;
+    |                                  ^^^^^^^^^^
+
+warning: use of deprecated constant `std::f32::MIN_EXP`: replaced by the `MIN_EXP` associated constant on `f32`
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\element\float\typemap.rs:271:31
+    |
+271 |     const MIN_EXP: i32 = f32::MIN_EXP;
+    |                               ^^^^^^^
+
+warning: use of deprecated constant `std::f32::MIN_POSITIVE`: replaced by the `MIN_POSITIVE` associated constant on `f32`
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\element\float\typemap.rs:273:48
+    |
+273 |     const MIN_POSITIVE: Self = ElemExpand(f32::MIN_POSITIVE);
+    |                                                ^^^^^^^^^^^^
+
+warning: use of deprecated constant `std::f32::NAN`: replaced by the `NAN` associated constant on `f32`
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\element\float\typemap.rs:275:49
+    |
+275 |     const NAN: Self = ElemExpand::from_f32(f32::NAN);
+    |                                                 ^^^
+
+warning: use of deprecated constant `std::f32::NEG_INFINITY`: replaced by the `NEG_INFINITY` associated constant on `f32`
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\element\float\typemap.rs:277:58
+    |
+277 |     const NEG_INFINITY: Self = ElemExpand::from_f32(f32::NEG_INFINITY);
+    |                                                          ^^^^^^^^^^^^
+
+warning: falling back to `f32` as the trait bound `f32: From<f64>` is not satisfied
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\polyfills.rs:66:46
+   |
+66 |     select_many(x.less_than(Line::new(F::new(0.0))), -erf, erf)
+   |                                              ^^^ help: explicitly specify the type as `f32`: `0.0_f32`
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #154024 <https://github.com/rust-lang/rust/issues/154024>
+   = note: `#[warn(float_literal_f32_fallback)]` (part of `#[warn(future_incompatible)]`) on by default
+
+warning: falling back to `f32` as the trait bound `f32: From<f64>` is not satisfied
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\polyfills.rs:75:30
+   |
+75 |     let p = Line::new(F::new(0.3275911));
+   |                              ^^^^^^^^^ help: explicitly specify the type as `f32`: `0.3275911_f32`
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #154024 <https://github.com/rust-lang/rust/issues/154024>
+
+warning: falling back to `f32` as the trait bound `f32: From<f64>` is not satisfied
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\polyfills.rs:76:31
+   |
+76 |     let a1 = Line::new(F::new(0.2548296));
+   |                               ^^^^^^^^^ help: explicitly specify the type as `f32`: `0.2548296_f32`
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #154024 <https://github.com/rust-lang/rust/issues/154024>
+
+warning: falling back to `f32` as the trait bound `f32: From<f64>` is not satisfied
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\polyfills.rs:77:32
+   |
+77 |     let a2 = Line::new(F::new(-0.28449674));
+   |                                ^^^^^^^^^^ help: explicitly specify the type as `f32`: `0.28449674_f32`
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #154024 <https://github.com/rust-lang/rust/issues/154024>
+
+warning: falling back to `f32` as the trait bound `f32: From<f64>` is not satisfied
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\polyfills.rs:78:31
+   |
+78 |     let a3 = Line::new(F::new(1.4214137));
+   |                               ^^^^^^^^^ help: explicitly specify the type as `f32`: `1.4214137_f32`
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #154024 <https://github.com/rust-lang/rust/issues/154024>
+
+warning: falling back to `f32` as the trait bound `f32: From<f64>` is not satisfied
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\polyfills.rs:79:32
+   |
+79 |     let a4 = Line::new(F::new(-1.453152));
+   |                                ^^^^^^^^ help: explicitly specify the type as `f32`: `1.453152_f32`
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #154024 <https://github.com/rust-lang/rust/issues/154024>
+
+warning: falling back to `f32` as the trait bound `f32: From<f64>` is not satisfied
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\polyfills.rs:80:31
+   |
+80 |     let a5 = Line::new(F::new(1.0614054));
+   |                               ^^^^^^^^^ help: explicitly specify the type as `f32`: `1.0614054_f32`
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #154024 <https://github.com/rust-lang/rust/issues/154024>
+
+warning: falling back to `f32` as the trait bound `f32: From<f64>` is not satisfied
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-core\src\frontend\polyfills.rs:81:32
+   |
+81 |     let one = Line::new(F::new(1.0));
+   |                                ^^^ help: explicitly specify the type as `f32`: `1.0_f32`
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #154024 <https://github.com/rust-lang/rust/issues/154024>
+
+   Compiling parking_lot_core v0.9.11
+   Compiling spirv v0.3.0+sdk-1.3.268.0
+   Compiling libloading v0.8.8
+warning: `naga` (build script) generated 58 warnings (58 duplicates)
+   Compiling arrayvec v0.7.6
+   Compiling hexf-parse v0.2.1
+   Compiling rustc-hash v1.1.0
+warning: unnecessary parentheses around closure body
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\proc\namer.rs:204:31
+    |
+204 |                 .map(|string| (AsciiUniCase(*string))),
+    |                               ^                     ^
+    |
+    = note: `#[warn(unused_parens)]` (part of `#[warn(unused)]`) on by default
+help: remove these parentheses
+    |
+204 -                 .map(|string| (AsciiUniCase(*string))),
+204 +                 .map(|string| AsciiUniCase(*string)),
+    |
+
+warning: a method with this name may be added to the standard library in the future
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\layout.rs:73:45
+   |
+73 |             capabilities: self.capabilities.recycle(),
+   |                                             ^^^^^^^
+   |
+   = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+   = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+   = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+   = note: `#[warn(unstable_name_collisions)]` (part of `#[warn(future_incompatible)]`) on by default
+
+warning: a method with this name may be added to the standard library in the future
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\layout.rs:74:41
+   |
+74 |             extensions: self.extensions.recycle(),
+   |                                         ^^^^^^^
+   |
+   = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+   = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+   = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\layout.rs:75:53
+   |
+75 |             ext_inst_imports: self.ext_inst_imports.recycle(),
+   |                                                     ^^^^^^^
+   |
+   = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+   = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+   = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\layout.rs:76:45
+   |
+76 |             memory_model: self.memory_model.recycle(),
+   |                                             ^^^^^^^
+   |
+   = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+   = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+   = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\layout.rs:77:45
+   |
+77 |             entry_points: self.entry_points.recycle(),
+   |                                             ^^^^^^^
+   |
+   = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+   = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+   = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\layout.rs:78:51
+   |
+78 |             execution_modes: self.execution_modes.recycle(),
+   |                                                   ^^^^^^^
+   |
+   = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+   = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+   = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\layout.rs:79:33
+   |
+79 |             debugs: self.debugs.recycle(),
+   |                                 ^^^^^^^
+   |
+   = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+   = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+   = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\layout.rs:80:43
+   |
+80 |             annotations: self.annotations.recycle(),
+   |                                           ^^^^^^^
+   |
+   = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+   = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+   = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\layout.rs:81:45
+   |
+81 |             declarations: self.declarations.recycle(),
+   |                                             ^^^^^^^
+   |
+   = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+   = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+   = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\layout.rs:82:63
+   |
+82 |             function_declarations: self.function_declarations.recycle(),
+   |                                                               ^^^^^^^
+   |
+   = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+   = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+   = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\layout.rs:83:61
+   |
+83 |             function_definitions: self.function_definitions.recycle(),
+   |                                                             ^^^^^^^
+   |
+   = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+   = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+   = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\writer.rs:141:44
+    |
+141 |             debugs: take(&mut self.debugs).recycle(),
+    |                                            ^^^^^^^
+    |
+    = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+    = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+    = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\writer.rs:142:54
+    |
+142 |             annotations: take(&mut self.annotations).recycle(),
+    |                                                      ^^^^^^^
+    |
+    = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+    = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+    = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: a method with this name may be added to the standard library in the future
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\writer.rs:151:50
+    |
+151 |             temp_list: take(&mut self.temp_list).recycle(),
+    |                                                  ^^^^^^^
+    |
+    = help: call with fully qualified syntax `Recyclable::recycle(...)` to keep using the current method
+    = warning: once this associated item is added to the standard library, the ambiguity may cause an error or change in behavior!
+    = note: for more information, see issue #48919 <https://github.com/rust-lang/rust/issues/48919>
+
+warning: `cubecl-core` (lib) generated 17 warnings (run `cargo fix --lib -p cubecl-core` to apply 8 suggestions)
+   Compiling ash v0.38.0+1.3.281
+   Compiling khronos-egl v6.0.0
+   Compiling gpu-descriptor-types v0.2.0
+   Compiling gpu-alloc-types v0.3.0
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-hal\build.rs:2:5
+   |
+ 2 | /     cfg_aliases::cfg_aliases! {
+ 3 | |         native: { not(target_arch = "wasm32") },
+ 4 | |         send_sync: { any(
+ 5 | |             not(target_arch = "wasm32"),
+...  |
+29 | |         supports_ptr_atomics: { target_has_atomic = "ptr" }
+30 | |     }
+   | |_____^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: `#[warn(semicolon_in_expressions_from_non_local_macros)]` (part of `#[warn(future_incompatible)]`) on by default
+   = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases::cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-hal\build.rs:2:5
+   |
+ 2 | /     cfg_aliases::cfg_aliases! {
+ 3 | |         native: { not(target_arch = "wasm32") },
+ 4 | |         send_sync: { any(
+ 5 | |             not(target_arch = "wasm32"),
+...  |
+29 | |         supports_ptr_atomics: { target_has_atomic = "ptr" }
+30 | |     }
+   | |_____^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases::cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: `wgpu-hal` (build script) generated 99 warnings (97 duplicates)
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\arena\unique_arena.rs:75:29
+   |
+75 |     pub(crate) fn drain_all(&mut self) -> UniqueArenaDrain<T> {
+   |                             ^^^^^^^^^     ^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                             |
+   |                             the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+   = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+   |
+75 |     pub(crate) fn drain_all(&mut self) -> UniqueArenaDrain<'_, T> {
+   |                                                            +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\compact\mod.rs:463:16
+    |
+463 |     fn as_type(&mut self) -> types::TypeTracer {
+    |                ^^^^^^^^^     ^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                |
+    |                the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+463 |     fn as_type(&mut self) -> types::TypeTracer<'_> {
+    |                                               ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\compact\mod.rs:472:28
+    |
+472 |     fn as_const_expression(&mut self) -> expressions::ExpressionTracer {
+    |                            ^^^^^^^^^     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                            |
+    |                            the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+472 |     fn as_const_expression(&mut self) -> expressions::ExpressionTracer<'_> {
+    |                                                                       ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\compact\functions.rs:59:22
+   |
+59 |     fn as_expression(&mut self) -> super::expressions::ExpressionTracer {
+   |                      ^^^^^^^^^     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                      |
+   |                      the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+59 |     fn as_expression(&mut self) -> super::expressions::ExpressionTracer<'_> {
+   |                                                                        ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\front\wgsl\lower\mod.rs:469:27
+    |
+469 |     fn as_const_evaluator(&mut self) -> proc::ConstantEvaluator {
+    |                           ^^^^^^^^^     ^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                           |
+    |                           the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+469 |     fn as_const_evaluator(&mut self) -> proc::ConstantEvaluator<'_> {
+    |                                                                ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\front\wgsl\lower\mod.rs:514:9
+    |
+514 |         &self,
+    |         ^^^^^ the lifetime is elided here
+515 |         value: T,
+516 |     ) -> crate::common::DiagnosticDisplay<(T, proc::GlobalCtx)> {
+    |                                               ^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+516 |     ) -> crate::common::DiagnosticDisplay<(T, proc::GlobalCtx<'_>)> {
+    |                                                              ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\front\wgsl\lower\mod.rs:985:31
+    |
+985 |     fn single_component(name: &str, name_span: Span) -> Result<u32> {
+    |                               ^^^^                      ^^^^^^^^^^^ the same lifetime is hidden here
+    |                               |
+    |                               the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+985 |     fn single_component(name: &str, name_span: Span) -> Result<'_, u32> {
+    |                                                                +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\front\wgsl\lower\mod.rs:996:18
+    |
+996 |     fn new(name: &str, name_span: Span) -> Result<Self> {
+    |                  ^^^^                      ^^^^^^^^^^^^ the same lifetime is hidden here
+    |                  |
+    |                  the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+996 |     fn new(name: &str, name_span: Span) -> Result<'_, Self> {
+    |                                                   +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\front\wgsl\parse\directive\enable_extension.rs:76:36
+   |
+76 |     pub(crate) fn from_ident(word: &str, span: Span) -> Result<Self> {
+   |                                    ^^^^                 ^^^^^^^^^^^^ the same lifetime is hidden here
+   |                                    |
+   |                                    the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+76 |     pub(crate) fn from_ident(word: &str, span: Span) -> Result<'_, Self> {
+   |                                                                +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\proc\constant_evaluator.rs:706:19
+    |
+706 |     pub fn to_ctx(&self) -> crate::proc::GlobalCtx {
+    |                   ^^^^^     ^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                   |
+    |                   the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+706 |     pub fn to_ctx(&self) -> crate::proc::GlobalCtx<'_> {
+    |                                                   ++++
+
+warning: `naga` (lib) generated 11 warnings (1 duplicate) (run `cargo fix --lib -p naga` to apply 10 suggestions)
+   Compiling wgpu-hal v26.0.2 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-hal)
+   Compiling gpu-alloc v0.6.0
+warning: trait `U8Internal` is never used
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\helpers.rs:123:7
+    |
+123 | trait U8Internal {
+    |       ^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: trait `StrUnstable` is never used
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\naga\src\back\spv\helpers.rs:134:7
+    |
+134 | trait StrUnstable {
+    |       ^^^^^^^^^^^
+
+   Compiling gpu-descriptor v0.3.2
+   Compiling parking_lot v0.12.4
+   Compiling cubecl-std v0.7.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-std)
+   Compiling ndk-sys v0.6.0+11769913
+   Compiling wgpu-types v26.0.2 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-types)
+   Compiling ordered-float v5.0.0
+warning: `wgpu-hal` (build script) generated 99 warnings (99 duplicates)
+   Compiling glow v0.16.0
+   Compiling raw-window-handle v0.6.2
+   Compiling profiling v1.0.17
+   Compiling renderdoc-sys v1.1.0
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-hal\src\gles\egl.rs:422:40
+    |
+422 |     pub unsafe fn get_without_egl_lock(&self) -> MappedMutexGuard<glow::Context> {
+    |                                        ^^^^^     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                                        |
+    |                                        the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+    = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+    |
+422 |     pub unsafe fn get_without_egl_lock(&self) -> MappedMutexGuard<'_, glow::Context> {
+    |                                                                   +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-hal\src\vulkan\device.rs:236:9
+    |
+236 |         &self,
+    |         ^^^^^ the lifetime is elided here
+...
+239 |     ) -> Option<impl 'a + Iterator<Item = vk::MappedMemoryRange>> {
+    |                                           ^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+239 |     ) -> Option<impl 'a + Iterator<Item = vk::MappedMemoryRange<'_>>> {
+    |                                                                ++++
+
+warning: `wgpu-hal` (lib) generated 2 warnings (run `cargo fix --lib -p wgpu-hal` to apply 2 suggestions)
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\build.rs:2:5
+   |
+ 2 | /     cfg_aliases::cfg_aliases! {
+ 3 | |         windows_linux_android: { any(windows, target_os = "linux", target_os = "android") },
+ 4 | |         send_sync: { all(
+ 5 | |             feature = "std",
+...  |
+25 | |         supports_64bit_atomics: { target_has_atomic = "64" }
+26 | |     }
+   | |_____^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: `#[warn(semicolon_in_expressions_from_non_local_macros)]` (part of `#[warn(future_incompatible)]`) on by default
+   = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases::cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\build.rs:2:5
+   |
+ 2 | /     cfg_aliases::cfg_aliases! {
+ 3 | |         windows_linux_android: { any(windows, target_os = "linux", target_os = "android") },
+ 4 | |         send_sync: { all(
+ 5 | |             feature = "std",
+...  |
+25 | |         supports_64bit_atomics: { target_has_atomic = "64" }
+26 | |     }
+   | |_____^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases::cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: `wgpu-core` (build script) generated 144 warnings (142 duplicates)
+   Compiling wgpu-core v26.0.2 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core)
+   Compiling wgpu-core-deps-windows-linux-android v26.0.2 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\platform-deps\windows-linux-android)
+   Compiling crossbeam-epoch v0.9.18
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu\build.rs:2:5
+   |
+ 2 | /     cfg_aliases::cfg_aliases! {
+ 3 | |         native: { not(target_arch = "wasm32") },
+ 4 | |         Emscripten: { all(target_arch = "wasm32", target_os = "emscripten") },
+ 5 | |         web: { all(target_arch = "wasm32", not(Emscripten), feature = "web") },
+...  |
+60 | |         no_std: { not(std) }
+61 | |     }
+   | |_____^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: `#[warn(semicolon_in_expressions_from_non_local_macros)]` (part of `#[warn(future_incompatible)]`) on by default
+   = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases::cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu\build.rs:2:5
+   |
+ 2 | /     cfg_aliases::cfg_aliases! {
+ 3 | |         native: { not(target_arch = "wasm32") },
+ 4 | |         Emscripten: { all(target_arch = "wasm32", target_os = "emscripten") },
+ 5 | |         web: { all(target_arch = "wasm32", not(Emscripten), feature = "web") },
+...  |
+60 | |         no_std: { not(std) }
+61 | |     }
+   | |_____^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases::cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: `wgpu` (build script) generated 354 warnings (352 duplicates)
+warning: `wgpu-core` (build script) generated 144 warnings (144 duplicates)
+   Compiling bytes v1.10.1
+   Compiling rayon-core v1.13.0
+   Compiling wgpu v26.0.2 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu)
+warning: `naga` (lib) generated 27 warnings (10 duplicates) (run `cargo fix --lib -p naga` to apply 1 suggestion)
+   Compiling crossbeam-deque v0.8.6
+   Compiling cubecl-random v0.7.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-random)
+   Compiling cubecl-reduce v0.7.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-reduce)
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\command\memory_init.rs:43:38
+   |
+43 |     pub(crate) fn drain_init_actions(&mut self) -> Drain<TextureInitTrackerAction> {
+   |                                      ^^^^^^^^^     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                                      |
+   |                                      the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+   = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+   |
+43 |     pub(crate) fn drain_init_actions(&mut self) -> Drain<'_, TextureInitTrackerAction> {
+   |                                                          +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\init_tracker\mod.rs:224:33
+    |
+224 |     pub(crate) fn uninitialized(&mut self, drain_range: Range<Idx>) -> UninitializedIter<Idx> {
+    |                                 ^^^^^^^^^ the lifetime is elided here  ^^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+224 |     pub(crate) fn uninitialized(&mut self, drain_range: Range<Idx>) -> UninitializedIter<'_, Idx> {
+    |                                                                                          +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\init_tracker\mod.rs:236:25
+    |
+236 |     pub(crate) fn drain(&mut self, drain_range: Range<Idx>) -> InitTrackerDrain<Idx> {
+    |                         ^^^^^^^^^ the lifetime is elided here  ^^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+236 |     pub(crate) fn drain(&mut self, drain_range: Range<Idx>) -> InitTrackerDrain<'_, Idx> {
+    |                                                                                 +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\lock\ranked.rs:188:17
+    |
+188 |     pub fn lock(&self) -> MutexGuard<T> {
+    |                 ^^^^^     ^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                 |
+    |                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+188 |     pub fn lock(&self) -> MutexGuard<'_, T> {
+    |                                      +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\lock\ranked.rs:259:17
+    |
+259 |     pub fn read(&self) -> RwLockReadGuard<T> {
+    |                 ^^^^^     ^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                 |
+    |                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+259 |     pub fn read(&self) -> RwLockReadGuard<'_, T> {
+    |                                           +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\lock\ranked.rs:268:18
+    |
+268 |     pub fn write(&self) -> RwLockWriteGuard<T> {
+    |                  ^^^^^     ^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                  |
+    |                  the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+268 |     pub fn write(&self) -> RwLockWriteGuard<'_, T> {
+    |                                             +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\lock\vanilla.rs:34:17
+   |
+34 |     pub fn lock(&self) -> MutexGuard<T> {
+   |                 ^^^^^     ^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                 |
+   |                 the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+34 |     pub fn lock(&self) -> MutexGuard<'_, T> {
+   |                                      +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\lock\vanilla.rs:90:17
+   |
+90 |     pub fn read(&self) -> RwLockReadGuard<T> {
+   |                 ^^^^^     ^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                 |
+   |                 the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+90 |     pub fn read(&self) -> RwLockReadGuard<'_, T> {
+   |                                           +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\lock\vanilla.rs:94:18
+   |
+94 |     pub fn write(&self) -> RwLockWriteGuard<T> {
+   |                  ^^^^^     ^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+   |                  |
+   |                  the lifetime is elided here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+94 |     pub fn write(&self) -> RwLockWriteGuard<'_, T> {
+   |                                             +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\registry.rs:73:27
+   |
+73 |     pub(crate) fn prepare(&self, id_in: Option<Id<T::Marker>>) -> FutureId<T> {
+   |                           ^^^^^ the lifetime is elided here       ^^^^^^^^^^^ the same lifetime is hidden here
+   |
+   = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+   |
+73 |     pub(crate) fn prepare(&self, id_in: Option<Id<T::Marker>>) -> FutureId<'_, T> {
+   |                                                                            +++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\snatch.rs:146:17
+    |
+146 |     pub fn read(&self) -> SnatchGuard {
+    |                 ^^^^^     ^^^^^^^^^^^ the same lifetime is hidden here
+    |                 |
+    |                 the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+146 |     pub fn read(&self) -> SnatchGuard<'_> {
+    |                                      ++++
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+   --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu-core\src\snatch.rs:157:18
+    |
+157 |     pub fn write(&self) -> ExclusiveSnatchGuard {
+    |                  ^^^^^     ^^^^^^^^^^^^^^^^^^^^ the same lifetime is hidden here
+    |                  |
+    |                  the lifetime is elided here
+    |
+    = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+help: use `'_` for type paths
+    |
+157 |     pub fn write(&self) -> ExclusiveSnatchGuard<'_> {
+    |                                                ++++
+
+warning: `wgpu` (build script) generated 354 warnings (354 duplicates)
+warning: trailing semicolon in macro used in expression position
+ --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-wgpu\build.rs:6:5
+  |
+6 | /     cfg_aliases! {
+7 | |         exclusive_memory_only: { any(feature = "exclusive-memory-only", target_family = "wasm") },
+8 | |         apple_silicon: { all(target_os = "macos", target_arch = "aarch64") },
+9 | |     }
+  | |_____^
+  |
+  = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+  = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+  = note: `#[warn(semicolon_in_expressions_from_non_local_macros)]` (part of `#[warn(future_incompatible)]`) on by default
+  = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+ --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-wgpu\build.rs:6:5
+  |
+6 | /     cfg_aliases! {
+7 | |         exclusive_memory_only: { any(feature = "exclusive-memory-only", target_family = "wasm") },
+8 | |         apple_silicon: { all(target_os = "macos", target_arch = "aarch64") },
+9 | |     }
+  | |_____^
+  |
+  = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+  = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+  = note: this warning originates in the macro `$crate::cfg_aliases` which comes from the expansion of the macro `cfg_aliases` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: `cubecl-wgpu` (build script) generated 16 warnings (14 duplicates)
+   Compiling static_assertions v1.1.0
+warning: `wgpu-core` (lib) generated 12 warnings (12 duplicates)
+   Compiling cubecl-wgpu v0.7.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-wgpu)
+   Compiling cubecl-matmul v0.7.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-matmul)
+   Compiling simd-adler32 v0.3.7
+   Compiling either v1.15.0
+   Compiling crc32fast v1.5.0
+   Compiling rayon v1.11.0
+warning: `wgpu-core` (lib) generated 12 warnings (run `cargo fix --lib -p wgpu-core` to apply 12 suggestions)
+   Compiling cubecl-convolution v0.7.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl-convolution)
+   Compiling adler2 v2.0.1
+   Compiling miniz_oxide v0.8.9
+   Compiling zerofrom v0.1.6
+   Compiling cubecl v0.7.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\cubecl\crates\cubecl)
+   Compiling burn-common v0.19.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-common)
+   Compiling cubecl-quant v0.7.0 (https://github.com/tracel-ai/cubecl?rev=d6b53441c0578287212ad8cb4b816253c42bc46e#d6b53441)
+   Compiling rand_distr v0.5.1
+   Compiling colored v3.0.0
+   Compiling stable_deref_trait v1.2.0
+   Compiling burn-tensor v0.19.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-tensor)
+   Compiling yoke v0.8.0
+   Compiling flate2 v1.1.2
+   Compiling socket2 v0.6.0
+   Compiling mio v1.0.4
+   Compiling tokio v1.47.1
+   Compiling ahash v0.8.12
+   Compiling zerovec v0.11.4
+   Compiling burn-ir v0.19.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-ir)
+   Compiling tracing-core v0.1.34
+   Compiling byteorder v1.5.0
+   Compiling tracing v0.1.41
+   Compiling burn-fusion v0.19.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-fusion)
+   Compiling hashbrown v0.13.2
+   Compiling aho-corasick v1.1.3
+   Compiling regex-syntax v0.8.6
+   Compiling regex-automata v0.4.10
+   Compiling text_placeholder v0.5.1
+   Compiling burn-cubecl-fusion v0.19.0 (C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-cubecl-fusion)
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-cubecl-fusion\src\matmul\tune.rs:37:68
+   |
+37 |     static TUNER: LocalTuner<FusedMatmulAutotuneKey, CubeTuneId> = local_tuner!();
+   |                                                                    ^^^^^^^^^^^^^^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: `#[warn(semicolon_in_expressions_from_non_local_macros)]` (part of `#[warn(future_incompatible)]`) on by default
+   = note: this warning originates in the macro `local_tuner` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: trailing semicolon in macro used in expression position
+  --> C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-cubecl-fusion\src\reduce\tune.rs:32:68
+   |
+32 |     static TUNER: LocalTuner<FusedReduceAutotuneKey, CubeTuneId> = local_tuner!();
+   |                                                                    ^^^^^^^^^^^^^^
+   |
+   = warning: this was previously accepted by the compiler but is being phased out; it will become a hard error in a future release!
+   = note: for more information, see issue #79813 <https://github.com/rust-lang/rust/issues/79813>
+   = note: this warning originates in the macro `local_tuner` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+memory allocation of 5308432 bytes failed
+stack backtrace:
+   0:     0x7ffefc26f529 - <unknown>
+   1:     0x7ffefc298d0e - <unknown>
+   2:     0x7ffefc27f5c4 - <unknown>
+   3:     0x7ffefc260c8c - <unknown>
+   4:     0x7ffefc2448fc - <unknown>
+   5:     0x7ffefc241f3f - <unknown>
+   6:     0x7ffefc260d2b - <unknown>
+   7:     0x7ffefc245728 - <unknown>
+   8:     0x7fff00238238 - <unknown>
+   9:     0x7fff002357de - <unknown>
+  10:     0x7ffefcd59fec - <unknown>
+  11:     0x7ffefcde21bd - <unknown>
+  12:     0x7ffefce99147 - <unknown>
+  13:     0x7ffefdc20f1c - <unknown>
+  14:     0x7ffefc8360e5 - <unknown>
+  15:     0x7ffefce941c3 - <unknown>
+  16:     0x7ffefce2efa5 - <unknown>
+  17:     0x7ffefce94217 - <unknown>
+  18:     0x7ffefc82e45c - <unknown>
+  19:     0x7ffefc833a5a - <unknown>
+  20:     0x7ffefc833a5a - <unknown>
+  21:     0x7ffefc833a5a - <unknown>
+  22:     0x7ffefc833a5a - <unknown>
+  23:     0x7ffefc833a5a - <unknown>
+  24:     0x7ffefc833a5a - <unknown>
+  25:     0x7ffefc833a5a - <unknown>
+  26:     0x7ffefc833a5a - <unknown>
+  27:     0x7ffefc833a5a - <unknown>
+  28:     0x7ffefc833a5a - <unknown>
+  29:     0x7ffefc833a5a - <unknown>
+  30:     0x7ffefc833a5a - <unknown>
+  31:     0x7ffefba0c850 - <unknown>
+  32:     0x7ffefc81bf3e - <unknown>
+  33:     0x7ffefbc8af87 - <unknown>
+  34:     0x7ffefbb7fcca - <unknown>
+  35:     0x7ffefbc8afd3 - <unknown>
+  36:     0x7ffefcfdd087 - <unknown>
+  37:     0x7ffefbc868cd - <unknown>
+  38:     0x7ffefbb6acce - <unknown>
+  39:     0x7ffefbc868fb - <unknown>
+  40:     0x7ffefd7a4949 - <unknown>
+  41:     0x7ffefbf2c013 - <unknown>
+  42:     0x7ffefbf48e7b - <unknown>
+  43:     0x7ffefbf442bb - <unknown>
+  44:     0x7ffef89ee2ed - <unknown>
+  45:     0x7ffef89c00e7 - <unknown>
+  46:     0x7ffef89b9865 - <unknown>
+  47:     0x7ffef89c4a27 - <unknown>
+  48:     0x7ffefc26c053 - std::sys::thread::windows::impl$0::new::thread_start
+                               at /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library\std\src\sys\thread\windows.rs:58
+  49:     0x7ff93bd4cd87 - BaseThreadInitThunk
+  50:     0x7ff93c3acaec - RtlUserThreadStart
+warning: `burn-cubecl-fusion` (lib) generated 2 warnings
+error: could not compile `burn-cubecl-fusion` (lib); 2 warnings emitted
+
+Caused by:
+  process didn't exit successfully: `C:/Users/28928/.rustup\toolchains\stable-x86_64-pc-windows-msvc\bin\rustc.exe --crate-name burn_cubecl_fusion --edition=2024 'C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-cubecl-fusion\src\lib.rs' --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type lib --emit=dep-info,metadata,link -C opt-level=2 -C embed-bitcode=no '--deny=rustdoc::invalid_html_tags' '--deny=rustdoc::broken_intra_doc_links' --cfg 'feature="autotune"' --cfg 'feature="default"' --cfg 'feature="std"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("autotune", "autotune-checks", "default", "doc", "std"))' -C metadata=99d8e06110427552 -C extra-filename=-4723a230b9f2b769 --out-dir 'C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\aarch64-linux-android\release\deps' --target aarch64-linux-android -C 'linker=C:/Users/28928/AppData/Local/Android/Sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/windows-x86_64/bin/aarch64-linux-android24-clang.cmd' -C strip=debuginfo -L 'dependency=C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\aarch64-linux-android\release\deps' -L 'dependency=C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\release\deps' --extern 'burn_common=C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\aarch64-linux-android\release\deps\libburn_common-f517aca448fe58cc.rmeta' --extern 'burn_fusion=C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\aarch64-linux-android\release\deps\libburn_fusion-da306b1ba69a429b.rmeta' --extern 'burn_ir=C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\aarch64-linux-android\release\deps\libburn_ir-17110a68b0c031f8.rmeta' --extern 'burn_tensor=C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\aarch64-linux-android\release\deps\libburn_tensor-77db445b18540a92.rmeta' --extern 'cubecl=C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\aarch64-linux-android\release\deps\libcubecl-3c93e2d82b71a2b2.rmeta' --extern 'cubecl_quant=C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\aarch64-linux-android\release\deps\libcubecl_quant-5d8fbf7ded5b25e7.rmeta' --extern 'derive_new=C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\release\deps\derive_new-a81badead6d1a880.dll' --extern 'half=C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\aarch64-linux-android\release\deps\libhalf-d7009ee227605316.rmeta' --extern 'serde=C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\brush\target\aarch64-linux-android\release\deps\libserde-0ca0d6d938d42c42.rmeta' -C link-arg=-fuse-ld=lld -C link-arg=-Wl,-z,max-page-size=16384` (exit code: 0xc0000409, STATUS_STACK_BUFFER_OVERRUN)
+warning: build failed, waiting for other jobs to finish...

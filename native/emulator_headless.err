@@ -1,0 +1,39 @@
+netsimd I 10-14 17:17:48.763 daemon\src\rust_main.rs:100 - netsim artifacts path: "C:\\Users\\28928\\AppData\\Local\\Temp\\netsimd"
+netsimd I 10-14 17:17:48.764 daemon\src\rust_main.rs:103 - NetsimdArgs {
+    fd_startup_str: None,
+    no_cli_ui: true,
+    no_web_ui: true,
+    pcap: false,
+    disable_address_reuse: false,
+    hci_port: None,
+    connector_instance: None,
+    instance: None,
+    logtostderr: false,
+    dev: false,
+    forward_host_mdns: false,
+    vsock: None,
+    config: None,
+    host_dns: Some(
+        "10.0.0.10",
+    ),
+    http_proxy: Some(
+        "http://127.0.0.1:53790",
+    ),
+    wifi_tap: None,
+    wifi: None,
+    test_beacons: false,
+    no_test_beacons: false,
+    no_shutdown: false,
+    verbose: false,
+    version: false,
+    debug: DebugArgs {
+        debug_no_traffic: false,
+        debug_no_network: false,
+        debug_no_wmedium: false,
+        debug_no_mdns_wmedium: false,
+        debug_no_guest_to_host_mdns: false,
+    },
+    rssi: None,
+}
+[h264 @ 000002524300B2C0] no frame!
+[h264 @ 000002524300B2C0] no frame!

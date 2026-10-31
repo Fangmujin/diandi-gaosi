@@ -1,0 +1,12 @@
+数据集布局已修复，SfM 产物现在位于 files/projects/<id>/dataset/sparse/0/，
+抽帧图片位于 files/projects/<id>/dataset/images/。
+
+本次端到端联调成功的项目（项目 ID 每次运行会变）在 dataset/sparse/0/ 下产出：
+  cameras.bin   64 B
+  images.bin    557,900 B
+  points3D.bin  40,826 B
+
+总计 598,790 B 的二进制 COLMAP 三件套。
+
+说明：原 colmap/ 顶层直接放三件套的方式已废弃，新布局与 libbrushheadless.so 的
+`--path DIR  COLMAP 数据集目录(images/ + sparse/)` 契约一致。

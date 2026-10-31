@@ -1,0 +1,110 @@
+===== CASE G_res32 (res=32, env: ) =====
+[2026-10-14T09:58:00Z INFO  brush_headless] Control directory: /data/local/tmp
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T09:58:00Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T09:58:01Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T09:58:01Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T09:58:01Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T09:58:01Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T09:58:01Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T09:58:04Z INFO  brush_headless] Starting training from /data/local/tmp/tiny_colmap
+[2026-10-14T09:58:04Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/tiny_colmap")
+[2026-10-14T09:58:04Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T09:58:04Z INFO  brush_process::process] Start of view stream
+[2026-10-14T09:58:04Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T09:58:04Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T09:58:04Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T09:58:04Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T09:58:04Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T09:58:04Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+[2026-10-14T09:58:04Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_001.png"
+[2026-10-14T09:58:04Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_002.png"
+[2026-10-14T09:58:04Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_003.png"
+[2026-10-14T09:58:04Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_004.png"
+[2026-10-14T09:58:04Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_005.png"
+[2026-10-14T09:58:04Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T09:58:04Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T09:58:04Z INFO  brush_headless] Loaded 6 training views
+[2026-10-14T09:58:04Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T09:58:04Z INFO  brush_process::train_stream] Starting with random splat config.
+[2026-10-14T09:58:07Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 16384
+[2026-10-14T09:58:09Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 11 }
+Segmentation fault 
+--- ply ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+
+===== CASE H_res64 (res=64, env: ) =====
+[2026-10-14T09:58:26Z INFO  brush_headless] Control directory: /data/local/tmp
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T09:58:26Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T09:58:27Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T09:58:27Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T09:58:27Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T09:58:27Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T09:58:27Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T09:58:29Z INFO  brush_headless] Starting training from /data/local/tmp/tiny_colmap
+[2026-10-14T09:58:29Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/tiny_colmap")
+[2026-10-14T09:58:29Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T09:58:29Z INFO  brush_process::process] Start of view stream
+[2026-10-14T09:58:29Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T09:58:29Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T09:58:29Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T09:58:29Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T09:58:29Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T09:58:29Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+[2026-10-14T09:58:29Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_001.png"
+[2026-10-14T09:58:29Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_002.png"
+[2026-10-14T09:58:29Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_003.png"
+[2026-10-14T09:58:30Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_004.png"
+[2026-10-14T09:58:30Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_005.png"
+[2026-10-14T09:58:30Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T09:58:30Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T09:58:30Z INFO  brush_headless] Loaded 6 training views
+[2026-10-14T09:58:30Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T09:58:30Z INFO  brush_process::train_stream] Starting with random splat config.
+[2026-10-14T09:58:34Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 16384
+[2026-10-14T09:58:35Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 11 }
+[2026-10-14T09:58:35Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 1, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 1
+Segmentation fault 
+--- ply ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+
+===== CASE I_res128_maxtasks1_autotune0 (res=128, env: CUBECL_WGPU_MAX_TASKS=1 CUBECL_AUTOTUNE_LEVEL=0) =====
+[2026-10-14T09:58:51Z INFO  brush_headless] Control directory: /data/local/tmp
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T09:58:51Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T09:58:51Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T09:58:51Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T09:58:51Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T09:58:51Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T09:58:51Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T09:58:54Z INFO  brush_headless] Starting training from /data/local/tmp/tiny_colmap
+[2026-10-14T09:58:54Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/tiny_colmap")
+[2026-10-14T09:58:54Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T09:58:54Z INFO  brush_process::process] Start of view stream
+[2026-10-14T09:58:54Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T09:58:54Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T09:58:54Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T09:58:54Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T09:58:54Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T09:58:54Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+[2026-10-14T09:58:54Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_001.png"
+[2026-10-14T09:58:54Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_002.png"
+[2026-10-14T09:58:54Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_003.png"
+[2026-10-14T09:58:54Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_004.png"
+[2026-10-14T09:58:54Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_005.png"
+[2026-10-14T09:58:54Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T09:58:54Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T09:58:54Z INFO  brush_headless] Loaded 6 training views
+[2026-10-14T09:58:54Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T09:58:54Z INFO  brush_process::train_stream] Starting with random splat config.
+[2026-10-14T09:58:57Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 16384
+[2026-10-14T09:58:59Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 11 }
+[2026-10-14T09:58:59Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 1, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 1
+Segmentation fault 
+--- ply ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+

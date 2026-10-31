@@ -1,0 +1,14 @@
+[package]
+name = "colmap-reader"
+edition.workspace = true
+version.workspace = true
+readme.workspace = true
+license.workspace = true
+
+[dependencies]
+glam.workspace = true
+tokio = { workspace = true, features = ["macros", "rt", "io-util"] }
+tokio_with_wasm.workspace = true
+
+[lints]
+workspace = true

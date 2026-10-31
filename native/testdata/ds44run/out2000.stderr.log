@@ -1,0 +1,133 @@
+[2026-10-14T17:03:00Z INFO  brush_headless] Control directory: ds44run
+[2026-10-14T17:03:00Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T17:03:01Z INFO  cubecl_wgpu::runtime] Using adapter AdapterInfo { name: "NVIDIA GeForce RTX 5060 Laptop GPU", vendor: 4318, device: 11609, device_type: DiscreteGpu, driver: "NVIDIA", driver_info: "582.05", backend: Vulkan }
+[2026-10-14T17:03:02Z INFO  cubecl_wgpu::runtime] Created wgpu compute server on device Device { inner: Core(CoreDevice { context: ContextWgpuCore { type: "Native" }, id: Id(0,1), error_sink: Mutex { data: ErrorSink }, features: Features { features_wgpu: FeaturesWGPU(SHADER_FLOAT32_ATOMIC | TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | PIPELINE_STATISTICS_QUERY | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | TEXTURE_BINDING_ARRAY | BUFFER_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT | MULTI_DRAW_INDIRECT_COUNT | PUSH_CONSTANTS | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | POLYGON_MODE_POINT | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | SPIRV_SHADER_PASSTHROUGH | MULTIVIEW | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | EXPERIMENTAL_RAY_TRACING_ACCELERATION_STRUCTURE | EXPERIMENTAL_RAY_QUERY | SHADER_F64 | SHADER_I16 | SHADER_PRIMITIVE_INDEX | SHADER_EARLY_DEPTH_TEST | SHADER_INT64 | SUBGROUP | SUBGROUP_VERTEX | SUBGROUP_BARRIER | PIPELINE_CACHE | SHADER_INT64_ATOMIC_MIN_MAX | SHADER_INT64_ATOMIC_ALL_OPS | VULKAN_EXTERNAL_MEMORY_WIN32 | TEXTURE_INT64_ATOMIC | EXPERIMENTAL_MESH_SHADER | EXPERIMENTAL_RAY_HIT_VERTEX_RETURN | EXPERIMENTAL_MESH_SHADER_MULTIVIEW | EXTENDED_ACCELERATION_STRUCTURE_VERTEX_FORMATS), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | DUAL_SOURCE_BLENDING | CLIP_DISTANCES) } }) } => AdapterInfo { name: "NVIDIA GeForce RTX 5060 Laptop GPU", vendor: 4318, device: 11609, device_type: DiscreteGpu, driver: "NVIDIA", driver_info: "582.05", backend: Vulkan }
+[2026-10-14T17:03:02Z INFO  brush_headless] Starting training from ds_44
+[2026-10-14T17:03:02Z INFO  brush_process::process] Starting process with source Path("ds_44")
+[2026-10-14T17:03:02Z INFO  brush_process::process] Mounted VFS with 47 files. (plys: 0)
+[2026-10-14T17:03:02Z INFO  brush_process::process] Start of view stream
+[2026-10-14T17:03:02Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T17:03:02Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T17:03:02Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 44 images
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0001.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0002.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0003.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0004.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0005.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0006.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0007.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0008.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0009.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0010.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0011.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0012.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0013.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0014.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0015.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0016.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0017.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0018.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0019.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0020.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0021.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0022.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0023.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0024.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0025.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0026.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0027.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0028.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0029.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0030.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0031.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0032.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0033.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0034.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0035.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0036.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0037.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0038.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0039.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0040.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0041.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0042.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0043.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images\\frame_0044.jpg"
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Starting from colmap points 7696
+[2026-10-14T17:03:02Z INFO  brush_dataset::formats::colmap] Created init splat from points
+[2026-10-14T17:03:02Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T17:03:02Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T17:03:02Z INFO  brush_headless] Loaded 44 training views
+[2026-10-14T17:03:02Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T17:03:02Z INFO  brush_headless] Dataset provides initial splats, using them
+[2026-10-14T17:03:03Z INFO  cubecl_runtime::tune::tune_cache] Load autotune cache ...
+[2026-10-14T17:03:03Z INFO  cubecl_runtime::tune::tune_cache] Loaded 15 autotune cached entries
+[2026-10-14T17:03:04Z INFO  cubecl_runtime::tune::tune_cache] Load autotune cache ...
+[2026-10-14T17:03:04Z INFO  cubecl_runtime::tune::tune_cache] Loaded 13 autotune cached entries
+[2026-10-14T17:03:04Z INFO  brush_process::train_stream] Start training loop.
+[2026-10-14T17:03:06Z INFO  cubecl_runtime::tune::tune_cache] Load autotune cache ...
+[2026-10-14T17:03:06Z INFO  cubecl_runtime::tune::tune_cache] Loaded 4 autotune cached entries
+[2026-10-14T17:03:06Z INFO  cubecl_runtime::tune::tuner] Tuning ConvAutotuneKey { kernel_size: [11, 1], stride: [1, 1], padding: [5, 0], dilation: [1, 1], groups: 3, in_channels: 4, out_channels: 4, shape: [1024, 1024], batch_size: 1, has_bias: false, dtype: F32 }
+[2026-10-14T17:03:06Z INFO  cubecl_runtime::tune::tuner] Tuning ConvAutotuneKey { kernel_size: [1, 11], stride: [1, 1], padding: [0, 5], dilation: [1, 1], groups: 3, in_channels: 4, out_channels: 4, shape: [1024, 1024], batch_size: 1, has_bias: false, dtype: F32 }
+[2026-10-14T17:03:07Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 1772544 }
+[2026-10-14T17:03:07Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 1, AxisIsContiguous: true, ReduceAxisShape: 1024, ReduceCount: 1024
+[2026-10-14T17:03:07Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 1024, ReduceCount: 1
+[2026-10-14T17:03:08Z INFO  cubecl_runtime::tune::tune_cache] Load autotune cache ...
+[2026-10-14T17:03:08Z INFO  cubecl_runtime::tune::tune_cache] Loaded 4 autotune cached entries
+[2026-10-14T17:03:08Z INFO  cubecl_runtime::tune::tuner] Tuning ConvTranspose2dAutotuneKey { kernel_size: [1, 11], stride: [1, 1], padding: [0, 5], padding_out: [0, 0], dilation: [1, 1], groups: 3, in_channels: 4, out_channels: 4, height: 1024, width: 1024, batch_size: 1, has_bias: false, dtype: F32 }
+[2026-10-14T17:03:08Z INFO  cubecl_runtime::tune::tuner] Tuning ConvTranspose2dAutotuneKey { kernel_size: [11, 1], stride: [1, 1], padding: [5, 0], padding_out: [0, 0], dilation: [1, 1], groups: 3, in_channels: 4, out_channels: 4, height: 1024, width: 1024, batch_size: 1, has_bias: false, dtype: F32 }
+[2026-10-14T17:03:09Z INFO  cubecl_runtime::tune::tune_cache] Load autotune cache ...
+[2026-10-14T17:03:09Z INFO  cubecl_runtime::tune::tune_cache] Loaded 6 autotune cached entries
+[2026-10-14T17:03:13Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 8267 }
+[2026-10-14T17:03:13Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 24801 }
+[2026-10-14T17:03:16Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 8267 }
+[2026-10-14T17:03:17Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 8767 }
+[2026-10-14T17:03:17Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 26301 }
+[2026-10-14T17:03:20Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 8767 }
+[2026-10-14T17:03:20Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 9166 }
+[2026-10-14T17:03:21Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 27498 }
+[2026-10-14T17:03:24Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 9166 }
+[2026-10-14T17:03:24Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 9618 }
+[2026-10-14T17:03:25Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 28854 }
+[2026-10-14T17:03:28Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 9617 }
+[2026-10-14T17:03:29Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 10113 }
+[2026-10-14T17:03:29Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 30339 }
+[2026-10-14T17:03:33Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 10109 }
+[2026-10-14T17:03:33Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 10682 }
+[2026-10-14T17:03:33Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 32046 }
+[2026-10-14T17:03:36Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 10681 }
+[2026-10-14T17:03:37Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 11316 }
+[2026-10-14T17:03:37Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 33948 }
+[2026-10-14T17:03:40Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 11313 }
+[2026-10-14T17:03:41Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 12007 }
+[2026-10-14T17:03:41Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 36021 }
+[2026-10-14T17:03:44Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 12003 }
+[2026-10-14T17:03:44Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 12772 }
+[2026-10-14T17:03:44Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 38316 }
+[2026-10-14T17:03:48Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 12768 }
+[2026-10-14T17:03:48Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Int(I32), ElemOutput: Int(I32), ElemAcc: Int(I32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 4096, ReduceCount: 1
+[2026-10-14T17:03:48Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 13588 }
+[2026-10-14T17:03:48Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 40764 }
+[2026-10-14T17:03:51Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 13586 }
+[2026-10-14T17:03:51Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 14490 }
+[2026-10-14T17:03:51Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 43470 }
+[2026-10-14T17:03:54Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 14484 }
+[2026-10-14T17:03:55Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 15484 }
+[2026-10-14T17:03:55Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 46452 }
+[2026-10-14T17:03:58Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 15472 }
+[2026-10-14T17:03:58Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 16543 }
+[2026-10-14T17:03:58Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 49629 }
+[2026-10-14T17:04:01Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 16539 }
+[2026-10-14T17:04:01Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 17704 }
+[2026-10-14T17:04:02Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 53112 }
+[2026-10-14T17:04:05Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 17695 }
+[2026-10-14T17:04:06Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 18939 }
+[2026-10-14T17:04:06Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 56817 }
+[2026-10-14T17:04:09Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 18924 }
+[2026-10-14T17:04:09Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 20291 }
+[2026-10-14T17:04:09Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 60873 }
+[2026-10-14T17:04:13Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: I32, length: 20270 }
+[2026-10-14T17:04:13Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 21680 }
+[2026-10-14T17:04:13Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 65040 }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0D1117">
+<title>点点高斯</title>
+<link rel="stylesheet" href="./css/tokens.css">
+<link rel="stylesheet" href="./css/app.css">
+<script type="importmap">{"imports":{"playcanvas":"./runtime/playcanvas.min.mjs"}}</script>
+</head>
+<body>
+<div id="boot">正在加载界面…<br><span style="color:#8B949E;font-size:12px">如果长时间没有内容，请检查原生引擎是否接入</span></div>
+<div id="app" hidden>
+  <main id="pages">
+    <section class="page" id="page-new" hidden></section>
+    <section class="page" id="page-gallery" hidden></section>
+    <section class="page" id="page-settings" hidden></section>
+  </main>
+  <div id="dock-new" hidden></div>
+  <div id="layer-progress" hidden></div>
+  <div id="layer-viewer" hidden></div>
+  <div id="sheet-root"></div>
+  <div id="toast-root"></div>
+  <nav id="tabbar"></nav>
+</div>
+<script src="./js/icons.js"></script>
+<script src="./js/native.js"></script>
+<script src="./js/ui.js"></script>
+<script src="./js/pages.js"></script>
+<script src="./js/progress.js"></script>
+<script src="./js/viewer.js"></script>
+<script src="./js/edit.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>

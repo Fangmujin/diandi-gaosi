@@ -1,0 +1,24 @@
+[package]
+name = "examples"
+edition.workspace = true
+version.workspace = true
+readme.workspace = true
+license.workspace = true
+
+[dependencies]
+burn.workspace = true
+brush-train.path = "../../crates/brush-train"
+brush-dataset.path = "../../crates/brush-dataset"
+brush-render.path = "../../crates/brush-render"
+brush-ui.path = "../../crates/brush-ui"
+
+tokio = { workspace = true, features = ["sync", "rt-multi-thread", "macros"] }
+rand.workspace = true
+glam.workspace = true
+image.workspace = true
+
+eframe.workspace = true
+egui.workspace = true
+
+[lints]
+workspace = true

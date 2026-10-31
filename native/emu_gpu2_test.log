@@ -1,0 +1,172 @@
+===== CASE E_hostgpu_ram4096 =====
+testdata/tiny_colmap\: 8 files pushed, 0 skipped. 1.2 MB/s (164355 bytes in 0.132s)
+prebuilt/x86_64/libbrushheadless.so: 1 file pushed, 0 skipped. 6.7 MB/s (78145952 bytes in 11.105s)
+--- meminfo ---
+MemTotal:        3041876 kB
+MemFree:          125652 kB
+MemAvailable:    1757140 kB
+[2026-10-14T09:48:18Z INFO  brush_headless] Control directory: /data/local/tmp
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T09:48:18Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T09:48:18Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T09:48:18Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T09:48:18Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T09:48:18Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T09:48:18Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T09:48:22Z INFO  brush_headless] Starting training from /data/local/tmp/tiny_colmap
+[2026-10-14T09:48:22Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/tiny_colmap")
+[2026-10-14T09:48:22Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T09:48:22Z INFO  brush_process::process] Start of view stream
+[2026-10-14T09:48:22Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T09:48:22Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T09:48:22Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T09:48:22Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T09:48:22Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T09:48:22Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+[2026-10-14T09:48:22Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_001.png"
+[2026-10-14T09:48:22Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_002.png"
+[2026-10-14T09:48:22Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_003.png"
+[2026-10-14T09:48:22Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_004.png"
+[2026-10-14T09:48:22Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_005.png"
+[2026-10-14T09:48:22Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T09:48:22Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T09:48:22Z INFO  brush_headless] Loaded 6 training views
+[2026-10-14T09:48:22Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T09:48:22Z INFO  brush_process::train_stream] Starting with random splat config.
+[2026-10-14T09:48:25Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 16384
+[2026-10-14T09:48:26Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 11 }
+[2026-10-14T09:48:26Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 1, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 1
+Segmentation fault 
+--- ply ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+--- tombstone ---
+tombstone_16
+tombstone_16.pb
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'google/sdk_gphone64_x86_64/emu64xa:16/BE4B.251210.005/14574095:user/release-keys'
+Kernel Release: '6.12.38-android16-5-gbb9513914902-ab13996879'
+Revision: '0'
+ABI: 'x86_64'
+Timestamp: 2026-10-14 09:48:27.699183700+0000
+Process uptime: 14s
+Executable: /data/local/tmp/libbrushheadless.so
+Cmdline: ./libbrushheadless.so --path /data/local/tmp/tiny_colmap --export-path /data/local/tmp/out.ply --total-steps 30 --max-resolution 128 --max-splats 50000 --sh-degree 0 --refine-every 10 --growth-stop-iter 25 --export-every 10 --seed 42
+pid: 3098, tid: 3113, name: tokio-runtime-w  >>> ./libbrushheadless.so <<<
+uid: 2000
+signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0000000000000000 (read)
+Cause: null pointer dereference
+    rax 00007e4b1c414d10  rbx 00007e4a4c4178b0  rcx 0000000000000000  rdx 86df000000008101
+    r8  0000000000000000  r9  0000000000008000  r10 0000000000000000  r11 0000000000000000
+    r12 0000000000000000  r13 00007e4b1c414d10  r14 00007e4b1c414d18  r15 0000000000000000
+    rdi 00007e4b1c414d00  rsi 00007e4c303a5340
+    rbp 00007e498b9b8b40  rsp 00007e498b9b8b00  rip 00007e498acad715  err 0000000000000004
+
+36 total frames
+backtrace:
+  NOTE: Function names and BuildId information is missing for some frames due
+  NOTE: to unreadable libraries. For unwinds of apps, only shared libraries
+  NOTE: found under the lib/ directory are readable.
+  NOTE: On this device, run setenforce 0 to make the libraries readable.
+  NOTE: Unreadable libraries:
+  NOTE:   /data/local/tmp/libbrushheadless.so
+      #00 pc 000000000008e715  /vendor/lib64/hw/vulkan.ranchu.so (std::__1::vector<unsigned long, std::__1::allocator<unsigned long>>::push_back[abi:nn210000](unsigned long const&)+165) (BuildId: 0422ce88257255a4c74341ca8e2bf5f7)
+      #01 pc 000000000009fa2d  /vendor/lib64/hw/vulkan.ranchu.so (gfxstream::vk::ResourceTracker::on_vkQueueSubmit(void*, VkResult, VkQueue_T*, unsigned int, VkSubmitInfo const*, VkFence_T*)+4509) (BuildId: 0422ce88257255a4c74341ca8e2bf5f7)
+      #02 pc 000000000010a3be  /vendor/lib64/hw/vulkan.ranchu.so (gfxstream_vk_QueueSubmit+2158) (BuildId: 0422ce88257255a4c74341ca8e2bf5f7)
+      #03 pc 0000000000023c85  /system/lib64/libvulkan.so (vulkan::driver::QueueSubmit(VkQueue_T*, unsigned int, VkSubmitInfo const*, VkFence_T*)+53) (BuildId: 1fefdaeaa07c1e23b104e9f6c27ee48a)
+      #04 pc 000000000466eff5  /data/local/tmp/libbrushheadless.so
+      #05 pc 00000000045b70c9  /data/local/tmp/libbrushheadless.so
+      #06 pc 00000000045df356  /data/local/tmp/libbrushheadless.so
+      #07 pc 00000000045f593a  /data/local/tmp/libbrushheadless.so
+      #08 pc 000000000455af24  /data/local/tmp/libbrushheadless.so
+      #09 pc 000000000453799b  /data/local/tmp/libbrushheadless.so
+      #10 pc 0000000004537d2b  /data/local/tmp/libbrushheadless.so
+      #11 pc 000000000454537a  /data/local/tmp/libbrushheadless.so
+      #12 pc 0000000003517ac9  /data/local/tmp/libbrushheadless.so
+
+===== CASE F_swiftshader_ram4096 =====
+testdata/tiny_colmap\: 8 files pushed, 0 skipped. 0.6 MB/s (164355 bytes in 0.241s)
+prebuilt/x86_64/libbrushheadless.so: 1 file pushed, 0 skipped. 9.8 MB/s (78145952 bytes in 7.586s)
+--- meminfo ---
+MemTotal:        3041876 kB
+MemFree:          113080 kB
+MemAvailable:    1726716 kB
+[2026-10-14T09:49:31Z INFO  brush_headless] Control directory: /data/local/tmp
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T09:49:31Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T09:49:31Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T09:49:31Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T09:49:31Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T09:49:31Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T09:49:31Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T09:49:32Z INFO  brush_headless] Starting training from /data/local/tmp/tiny_colmap
+[2026-10-14T09:49:32Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/tiny_colmap")
+[2026-10-14T09:49:32Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T09:49:32Z INFO  brush_process::process] Start of view stream
+[2026-10-14T09:49:32Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T09:49:32Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T09:49:32Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T09:49:32Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T09:49:32Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T09:49:32Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+[2026-10-14T09:49:32Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_001.png"
+[2026-10-14T09:49:32Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_002.png"
+[2026-10-14T09:49:32Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_003.png"
+[2026-10-14T09:49:32Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_004.png"
+[2026-10-14T09:49:32Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_005.png"
+[2026-10-14T09:49:32Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T09:49:32Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T09:49:32Z INFO  brush_headless] Loaded 6 training views
+[2026-10-14T09:49:32Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T09:49:32Z INFO  brush_process::train_stream] Starting with random splat config.
+[2026-10-14T09:49:34Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 16384
+[2026-10-14T09:49:35Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 11 }
+[2026-10-14T09:49:35Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 1, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 1
+Segmentation fault 
+--- ply ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+--- tombstone ---
+tombstone_17
+tombstone_17.pb
+*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+Build fingerprint: 'google/sdk_gphone64_x86_64/emu64xa:16/BE4B.251210.005/14574095:user/release-keys'
+Kernel Release: '6.12.38-android16-5-gbb9513914902-ab13996879'
+Revision: '0'
+ABI: 'x86_64'
+Timestamp: 2026-10-14 09:49:37.388379900+0000
+Process uptime: 10s
+Executable: /data/local/tmp/libbrushheadless.so
+Cmdline: ./libbrushheadless.so --path /data/local/tmp/tiny_colmap --export-path /data/local/tmp/out.ply --total-steps 30 --max-resolution 128 --max-splats 50000 --sh-degree 0 --refine-every 10 --growth-stop-iter 25 --export-every 10 --seed 42
+pid: 3303, tid: 3303, name: libbrushheadles  >>> ./libbrushheadless.so <<<
+uid: 2000
+signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0000000000000000 (read)
+Cause: null pointer dereference
+    rax 000072610840aeb0  rbx 00007260484197c0  rcx 0000000000000000  rdx 0cbf000000008101
+    r8  0000000000000000  r9  0000000000008000  r10 0000000000000000  r11 0000000000000000
+    r12 0000000000000000  r13 000072610840aeb0  r14 000072610840aeb8  r15 0000000000000000
+    rdi 000072610840aea0  rsi 00007262bc785340
+    rbp 00007ffec3152530  rsp 00007ffec31524f0  rip 000072601169a715  err 0000000000000004
+
+29 total frames
+backtrace:
+  NOTE: Function names and BuildId information is missing for some frames due
+  NOTE: to unreadable libraries. For unwinds of apps, only shared libraries
+  NOTE: found under the lib/ directory are readable.
+  NOTE: On this device, run setenforce 0 to make the libraries readable.
+  NOTE: Unreadable libraries:
+  NOTE:   /data/local/tmp/libbrushheadless.so
+      #00 pc 000000000008e715  /vendor/lib64/hw/vulkan.ranchu.so (std::__1::vector<unsigned long, std::__1::allocator<unsigned long>>::push_back[abi:nn210000](unsigned long const&)+165) (BuildId: 0422ce88257255a4c74341ca8e2bf5f7)
+      #01 pc 000000000009fa2d  /vendor/lib64/hw/vulkan.ranchu.so (gfxstream::vk::ResourceTracker::on_vkQueueSubmit(void*, VkResult, VkQueue_T*, unsigned int, VkSubmitInfo const*, VkFence_T*)+4509) (BuildId: 0422ce88257255a4c74341ca8e2bf5f7)
+      #02 pc 000000000010a3be  /vendor/lib64/hw/vulkan.ranchu.so (gfxstream_vk_QueueSubmit+2158) (BuildId: 0422ce88257255a4c74341ca8e2bf5f7)
+      #03 pc 0000000000023c85  /system/lib64/libvulkan.so (vulkan::driver::QueueSubmit(VkQueue_T*, unsigned int, VkSubmitInfo const*, VkFence_T*)+53) (BuildId: 1fefdaeaa07c1e23b104e9f6c27ee48a)
+      #04 pc 000000000466eff5  /data/local/tmp/libbrushheadless.so
+      #05 pc 00000000045b70c9  /data/local/tmp/libbrushheadless.so
+      #06 pc 00000000045df356  /data/local/tmp/libbrushheadless.so
+      #07 pc 00000000045f593a  /data/local/tmp/libbrushheadless.so
+      #08 pc 000000000455af24  /data/local/tmp/libbrushheadless.so
+      #09 pc 000000000453799b  /data/local/tmp/libbrushheadless.so
+      #10 pc 000000000453655e  /data/local/tmp/libbrushheadless.so
+      #11 pc 0000000004545045  /data/local/tmp/libbrushheadless.so
+      #12 pc 0000000003519f68  /data/local/tmp/libbrushheadless.so
+

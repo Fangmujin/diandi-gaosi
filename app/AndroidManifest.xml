@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.diandi.gaosi"
+    android:versionCode="1"
+    android:versionName="0.1">
+
+    <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="36" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROCESSING" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <!-- 保存 HTML 到「下载/点点高斯/」。API 29+ 走 MediaStore 不需要它，
+         这里只覆盖 API 24-28 的外部公共目录路径，故用 maxSdkVersion 收口。 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="false" />
+
+    <application
+        android:label="点点高斯"
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="false"
+        android:debuggable="true"
+        android:extractNativeLibs="true"
+        android:hardwareAccelerated="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|uiMode|density|fontScale">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".PipelineService"
+            android:exported="false"
+            android:foregroundServiceType="mediaProcessing" />
+
+        <!-- 分享 HTML：把 cacheDir/shared/ 下的产物授权给接收方应用。
+             本工程无 gradle、javac 只挂 android.jar，拿不到 androidx 的 FileProvider，
+             改用自带的 ShareFileProvider（同样的 content:// + grantUriPermission 语义）。
+             authority 必须写死：aapt2 不做 ${applicationId} 占位符替换（那是 AGP 的活）。 -->
+        <provider
+            android:name=".ShareFileProvider"
+            android:authorities="com.diandi.gaosi.files"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+    </application>
+</manifest>

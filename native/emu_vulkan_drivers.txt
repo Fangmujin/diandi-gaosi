@@ -1,0 +1,12 @@
+android.hardware.audio.effect@7.0-impl.so
+android.hardware.audio.legacy@7.1-impl.ranchu.so
+android.hardware.audio@7.1-impl.ranchu.so
+android.hardware.sensors@2.1-impl.ranchu.so
+audio.bluetooth.default.so
+audio.primary.default.so
+audio.r_submix.default.so
+gralloc.default.so
+local_time.default.so
+mapper.minigbm.so
+mapper.ranchu.so
+vulkan.ranchu.so

@@ -1,0 +1,11 @@
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+{"iter":5,"total":30,"splats":7696,"loss":0.27864218,"elapsed_ms":5450,"eta_sec":27.25,"stage":"training"}
+{"iter":10,"total":30,"splats":7696,"loss":0.27864218,"elapsed_ms":5450,"eta_sec":27.25,"stage":"exporting"}
+{"iter":10,"total":30,"splats":7696,"loss":0.30251518,"elapsed_ms":5583,"eta_sec":11.166,"stage":"training"}
+{"iter":15,"total":30,"splats":8462,"loss":0.3874415,"elapsed_ms":7402,"eta_sec":7.402,"stage":"training"}
+{"iter":20,"total":30,"splats":8462,"loss":0.3874415,"elapsed_ms":7402,"eta_sec":7.402,"stage":"exporting"}
+{"iter":20,"total":30,"splats":8462,"loss":0.35738277,"elapsed_ms":7511,"eta_sec":3.7555,"stage":"training"}
+{"iter":25,"total":30,"splats":9306,"loss":0.39046785,"elapsed_ms":8719,"eta_sec":1.7438,"stage":"training"}
+{"iter":30,"total":30,"splats":9306,"loss":0.39046785,"elapsed_ms":8719,"eta_sec":1.7438,"stage":"exporting"}
+{"iter":30,"total":30,"splats":9306,"loss":0.4156715,"elapsed_ms":8834,"eta_sec":0.0,"stage":"training"}
+{"iter":30,"total":30,"splats":9306,"loss":0.4156715,"elapsed_ms":8834,"eta_sec":0.0,"stage":"done"}

@@ -1,0 +1,13 @@
+[package]
+name = "brush-rerun"
+edition.workspace = true
+version.workspace = true
+readme.workspace = true
+license.workspace = true
+
+[target.'cfg(not(target_family = "wasm"))'.dependencies]
+rerun.workspace = true
+burn.workspace = true
+
+[lints]
+workspace = true

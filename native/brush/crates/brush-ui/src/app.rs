@@ -1,0 +1,278 @@
+use crate::UiMode;
+use crate::panels::AppPane;
+use crate::ui_process::UiProcess;
+use crate::{
+    camera_controls::CameraClamping, datasets::DatasetPanel, scene::ScenePanel,
+    settings::SettingsPanel, stats::StatsPanel,
+};
+use eframe::egui;
+use egui::ThemePreference;
+use egui_tiles::{SimplificationOptions, Tile, TileId, Tiles};
+use glam::Vec3;
+use std::collections::HashMap;
+use std::sync::Arc;
+use tracing::trace_span;
+
+pub(crate) struct AppTree {
+    process: Arc<UiProcess>,
+}
+
+type PaneType = Box<dyn AppPane>;
+
+impl egui_tiles::Behavior<PaneType> for AppTree {
+    fn tab_title_for_pane(&mut self, pane: &PaneType) -> egui::WidgetText {
+        pane.title().into()
+    }
+
+    fn pane_ui(
+        &mut self,
+        ui: &mut egui::Ui,
+        _tile_id: TileId,
+        pane: &mut PaneType,
+    ) -> egui_tiles::UiResponse {
+        egui::Frame::new()
+            .inner_margin(pane.inner_margin())
+            .show(ui, |ui| {
+                pane.ui(ui, self.process.as_ref());
+            });
+        egui_tiles::UiResponse::None
+    }
+
+    /// What are the rules for simplifying the tree?
+    fn simplification_options(&self) -> SimplificationOptions {
+        let all_panes_must_have_tabs = match self.process.ui_mode() {
+            UiMode::Default => true,
+            UiMode::FullScreenSplat | UiMode::EmbeddedViewer => false,
+        };
+
+        SimplificationOptions {
+            all_panes_must_have_tabs,
+            ..Default::default()
+        }
+    }
+
+    /// Width of the gap between tiles in a horizontal or vertical layout,
+    /// and between rows/columns in a grid layout.
+    fn gap_width(&self, _style: &egui::Style) -> f32 {
+        match self.process.ui_mode() {
+            UiMode::Default => 0.5,
+            UiMode::FullScreenSplat => 0.0,
+            UiMode::EmbeddedViewer => 0.0,
+        }
+    }
+}
+
+#[derive(Clone, PartialEq, Default)]
+pub struct CameraSettings {
+    pub speed_scale: Option<f32>,
+    pub splat_scale: Option<f32>,
+    pub background: Option<Vec3>,
+    pub grid_enabled: Option<bool>,
+    pub clamping: CameraClamping,
+}
+
+pub struct App {
+    tree: egui_tiles::Tree<PaneType>,
+    tree_ctx: AppTree,
+}
+
+impl App {
+    pub fn new(cc: &eframe::CreationContext, context: Arc<UiProcess>) -> Self {
+        // For now just assume we're running on the default
+        let state = cc
+            .wgpu_render_state
+            .as_ref()
+            .expect("Must use wgpu to render UI.");
+
+        // Initialize Burn on the existing device.
+        let device = brush_render::burn_init_device(
+            state.adapter.clone(),
+            state.device.clone(),
+            state.queue.clone(),
+        );
+
+        // Inform the context of the connection.
+        log::info!("Connecting context to Burn device & GUI context.");
+        context.connect_device(device.clone(), cc.egui_ctx.clone());
+
+        // Brush is always in dark mode for now, as it looks better and I don't care much to
+        // put in the work to support both light and dark mode!
+        cc.egui_ctx
+            .options_mut(|opt| opt.theme_preference = ThemePreference::Dark);
+
+        #[cfg(target_os = "android")]
+        {
+            // Mobile: cap the DPI scale so widgets are larger and the UI renders
+            // at a lower resolution (much cheaper for the phone GPU).
+            let scale = cc.egui_ctx.pixels_per_point();
+            if scale > 1.5 {
+                cc.egui_ctx.set_pixels_per_point(1.5);
+            }
+        }
+
+        let mut tiles: Tiles<PaneType> = Tiles::default();
+        let settings_pane = tiles.insert_pane(Box::new(SettingsPanel::new()));
+        let stats_pane =
+            tiles.insert_pane(Box::new(StatsPanel::new(device.clone(), state.adapter.get_info())));
+        let side_pane = tiles.insert_vertical_tile(vec![settings_pane, stats_pane]);
+
+        let scene_pane = tiles.insert_pane(Box::new(ScenePanel::new(
+            state.device.clone(),
+            state.queue.clone(),
+            state.renderer.clone(),
+        )));
+        let dataset_pane = tiles.insert_pane(Box::new(DatasetPanel::new()));
+
+        let right_side = tiles.insert_container(egui_tiles::Linear::new(
+            egui_tiles::LinearDir::Vertical,
+            vec![scene_pane, dataset_pane],
+        ));
+
+        // Portrait screens (phones) stack the control panels above the scene;
+        // landscape keeps the classic side-by-side layout.
+        let screen = cc.egui_ctx.screen_rect();
+        // On Android always use the stacked layout: phones are primarily
+        // portrait and screen_rect may not be ready during construction.
+        let portrait = cfg!(target_os = "android") || screen.height() > screen.width();
+        let mut lin = if portrait {
+            let mut lin = egui_tiles::Linear::new(
+                egui_tiles::LinearDir::Vertical,
+                vec![side_pane, right_side],
+            );
+            lin.shares.set_share(side_pane, 0.42);
+            lin
+        } else {
+            let mut lin = egui_tiles::Linear::new(
+                egui_tiles::LinearDir::Horizontal,
+                vec![side_pane, right_side],
+            );
+            lin.shares.set_share(side_pane, 0.35);
+            lin
+        };
+        let root_container = tiles.insert_container(lin);
+
+        let tree = egui_tiles::Tree::new("brush_tree", root_container, tiles);
+        let tree_ctx = AppTree { process: context };
+
+        // Self-check hook on Android: when launched with the
+        // "marvis_auto_path" intent extra, start loading the dataset
+        // immediately (emulator touch input is unreliable).
+        #[cfg(target_os = "android")]
+        {
+            if let Some(path) = rrfd::android::auto_path() {
+                log::info!("Auto loading dataset from intent extra: {path}");
+                // Pure-PLY datasets fall through to view_stream and don't
+                // need ProcessArgs; dropping the sender is sufficient.
+                let (tx, rx): (
+                    tokio::sync::oneshot::Sender<brush_process::config::ProcessArgs>,
+                    tokio::sync::oneshot::Receiver<brush_process::config::ProcessArgs>,
+                ) = tokio::sync::oneshot::channel();
+                drop(tx);
+                tree_ctx
+                    .process
+                    .start_new_process(brush_vfs::DataSource::Path(path), rx);
+                // start_new_process spawns a task that waits for a
+                // DeviceContext through a oneshot channel. connect_device is
+                // only invoked once during construction (before this hook),
+                // so re-invoke it now to hand over the already-initialized
+                // Burn/WGPU device and kick off the pipeline.
+                tree_ctx.process.connect_device(device.clone(), cc.egui_ctx.clone());
+            }
+        }
+
+        Self { tree, tree_ctx }
+    }
+
+    fn receive_messages(&mut self) {
+        let _span = trace_span!("Receive Messages").entered();
+
+        let messages = self.tree_ctx.process.message_queue();
+
+        for message in messages {
+            match message {
+                Ok(message) => {
+                    for (_, pane) in self.tree.tiles.iter_mut() {
+                        match pane {
+                            Tile::Pane(pane) => {
+                                pane.on_message(&message, self.tree_ctx.process.as_ref());
+                            }
+                            Tile::Container(_) => {}
+                        }
+                    }
+                }
+                Err(e) => {
+                    for (_, pane) in self.tree.tiles.iter_mut() {
+                        match pane {
+                            Tile::Pane(pane) => {
+                                pane.on_error(&e, self.tree_ctx.process.as_ref());
+                            }
+                            Tile::Container(_) => {}
+                        }
+                    }
+                }
+            };
+        }
+    }
+}
+
+impl eframe::App for App {
+    fn update(&mut self, ctx: &egui::Context, _: &mut eframe::Frame) {
+        let _span = trace_span!("Update UI").entered();
+
+        self.receive_messages();
+
+        if ctx.input(|i| i.key_pressed(egui::Key::F)) {
+            let current_mode = self.tree_ctx.process.ui_mode();
+            let new_mode = match current_mode {
+                UiMode::Default => UiMode::FullScreenSplat,
+                UiMode::FullScreenSplat => UiMode::Default,
+                // Don't allow exiting this mode.
+                UiMode::EmbeddedViewer => UiMode::EmbeddedViewer,
+            };
+            self.tree_ctx.process.set_ui_mode(new_mode);
+        }
+
+        let process = self.tree_ctx.process.clone();
+
+        // Recursive function to compute visibility bottom-up
+        let mut tile_visibility = HashMap::new();
+
+        fn compute_visibility(
+            tile_id: TileId,
+            tiles: &Tiles<PaneType>,
+            process: &UiProcess,
+            memo: &mut HashMap<TileId, bool>,
+        ) -> bool {
+            if let Some(&cached) = memo.get(&tile_id) {
+                return cached;
+            }
+
+            let c = tiles.get(tile_id).expect("Must come from valid parent");
+            let visible = match c {
+                Tile::Pane(pane) => pane.is_visible(process),
+                Tile::Container(container) => {
+                    // Container is visible if any child is visible
+                    container
+                        .active_children()
+                        .any(|&child_id| compute_visibility(child_id, tiles, process, memo))
+                }
+            };
+            memo.insert(tile_id, visible);
+            visible
+        }
+        // Compute visibility for all tiles
+        for tile_id in self.tree.tiles.tile_ids().collect::<Vec<_>>() {
+            self.tree.set_visible(
+                tile_id,
+                compute_visibility(tile_id, &self.tree.tiles, &process, &mut tile_visibility),
+            );
+        }
+
+        egui::CentralPanel::default()
+            .frame(egui::Frame::central_panel(ctx.style().as_ref()).inner_margin(0.0))
+            .show(ctx, |ui| {
+                let _span = trace_span!("Render UI").entered();
+                self.tree.ui(&mut self.tree_ctx, ui);
+            });
+    }
+}

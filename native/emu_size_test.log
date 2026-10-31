@@ -1,0 +1,98 @@
+===== SIZE tiny32 (max-resolution 32) =====
+testdata/tiny32\: 8 files pushed, 0 skipped. 0.0 MB/s (9941 bytes in 0.193s)
+[2026-10-14T09:53:23Z INFO  brush_headless] Control directory: /data/local/tmp
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T09:53:23Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T09:53:23Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T09:53:23Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T09:53:23Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T09:53:23Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T09:53:23Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T09:53:24Z INFO  brush_headless] Starting training from /data/local/tmp/ds
+[2026-10-14T09:53:24Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/ds")
+[2026-10-14T09:53:24Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T09:53:24Z INFO  brush_process::process] Start of view stream
+[2026-10-14T09:53:24Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T09:53:24Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T09:53:24Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T09:53:24Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"failed","error":"Failed to load format.: IO error while loading dataset.: early eof"}
+[2026-10-14T09:53:24Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T09:53:24Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+Error: Failed to load format.
+
+Caused by:
+    0: IO error while loading dataset.
+    1: early eof
+--- ply ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+
+===== SIZE tiny64 (max-resolution 64) =====
+testdata/tiny64\: 8 files pushed, 0 skipped. 0.2 MB/s (39113 bytes in 0.244s)
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T09:53:33Z INFO  brush_headless] Control directory: /data/local/tmp
+[2026-10-14T09:53:33Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T09:53:33Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T09:53:33Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T09:53:33Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T09:53:33Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T09:53:33Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T09:53:34Z INFO  brush_headless] Starting training from /data/local/tmp/ds
+[2026-10-14T09:53:34Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/ds")
+[2026-10-14T09:53:34Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T09:53:34Z INFO  brush_process::process] Start of view stream
+[2026-10-14T09:53:34Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T09:53:34Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T09:53:34Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T09:53:34Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T09:53:34Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T09:53:34Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"failed","error":"Failed to load format.: IO error while loading dataset.: early eof"}
+Error: Failed to load format.
+
+Caused by:
+    0: IO error while loading dataset.
+    1: early eof
+--- ply ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+
+===== SIZE tiny_colmap (max-resolution 128) =====
+testdata/tiny_colmap\: 8 files pushed, 0 skipped. 1.7 MB/s (164355 bytes in 0.091s)
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T09:53:43Z INFO  brush_headless] Control directory: /data/local/tmp
+[2026-10-14T09:53:43Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T09:53:43Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T09:53:43Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T09:53:43Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T09:53:43Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T09:53:43Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T09:53:45Z INFO  brush_headless] Starting training from /data/local/tmp/ds
+[2026-10-14T09:53:45Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/ds")
+[2026-10-14T09:53:45Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T09:53:45Z INFO  brush_process::process] Start of view stream
+[2026-10-14T09:53:45Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T09:53:45Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T09:53:45Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T09:53:45Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T09:53:45Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T09:53:45Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+[2026-10-14T09:53:45Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_001.png"
+[2026-10-14T09:53:45Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_002.png"
+[2026-10-14T09:53:45Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_003.png"
+[2026-10-14T09:53:45Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_004.png"
+[2026-10-14T09:53:45Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_005.png"
+[2026-10-14T09:53:45Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T09:53:45Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T09:53:45Z INFO  brush_headless] Loaded 6 training views
+[2026-10-14T09:53:45Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T09:53:45Z INFO  brush_process::train_stream] Starting with random splat config.
+[2026-10-14T09:53:48Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 16384
+[2026-10-14T09:53:49Z INFO  cubecl_runtime::tune::tuner] Tuning SumAutotuneKey { dtype: F32, length: 11 }
+[2026-10-14T09:53:49Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 1, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 1
+Segmentation fault 
+--- ply ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+

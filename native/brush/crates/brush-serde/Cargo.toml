@@ -1,0 +1,29 @@
+[package]
+name = "brush-serde"
+edition.workspace = true
+version.workspace = true
+readme.workspace = true
+license.workspace = true
+
+[dependencies]
+brush-render.path = "../brush-render"
+brush-vfs.path = "../brush-vfs"
+
+burn.workspace = true
+burn-cubecl.workspace = true
+glam.workspace = true
+serde.workspace = true
+serde-ply.workspace = true
+tokio-stream.workspace = true
+async-fn-stream.workspace = true
+web-time.workspace = true
+tokio_with_wasm.workspace = true
+
+[target.'cfg(target_family = "wasm")'.dependencies]
+tokio = { workspace = true, features = ["io-util", "macros", "rt"] }
+
+[target.'cfg(not(target_family = "wasm"))'.dependencies]
+tokio = { workspace = true, features = ["io-util", "fs", "macros"] }
+
+[lints]
+workspace = true

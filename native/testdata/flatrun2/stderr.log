@@ -1,0 +1,135 @@
+[2026-10-14T16:57:08Z INFO  brush_headless] Control directory: flatrun2
+[2026-10-14T16:57:08Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T16:57:09Z INFO  cubecl_wgpu::runtime] Using adapter AdapterInfo { name: "NVIDIA GeForce RTX 5060 Laptop GPU", vendor: 4318, device: 11609, device_type: DiscreteGpu, driver: "NVIDIA", driver_info: "582.05", backend: Vulkan }
+[2026-10-14T16:57:09Z INFO  cubecl_wgpu::runtime] Created wgpu compute server on device Device { inner: Core(CoreDevice { context: ContextWgpuCore { type: "Native" }, id: Id(0,1), error_sink: Mutex { data: ErrorSink }, features: Features { features_wgpu: FeaturesWGPU(SHADER_FLOAT32_ATOMIC | TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | PIPELINE_STATISTICS_QUERY | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | TEXTURE_BINDING_ARRAY | BUFFER_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT | MULTI_DRAW_INDIRECT_COUNT | PUSH_CONSTANTS | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | POLYGON_MODE_POINT | CONSERVATIVE_RASTERIZATION | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | SPIRV_SHADER_PASSTHROUGH | MULTIVIEW | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | EXPERIMENTAL_RAY_TRACING_ACCELERATION_STRUCTURE | EXPERIMENTAL_RAY_QUERY | SHADER_F64 | SHADER_I16 | SHADER_PRIMITIVE_INDEX | SHADER_EARLY_DEPTH_TEST | SHADER_INT64 | SUBGROUP | SUBGROUP_VERTEX | SUBGROUP_BARRIER | PIPELINE_CACHE | SHADER_INT64_ATOMIC_MIN_MAX | SHADER_INT64_ATOMIC_ALL_OPS | VULKAN_EXTERNAL_MEMORY_WIN32 | TEXTURE_INT64_ATOMIC | EXPERIMENTAL_MESH_SHADER | EXPERIMENTAL_RAY_HIT_VERTEX_RETURN | EXPERIMENTAL_MESH_SHADER_MULTIVIEW | EXTENDED_ACCELERATION_STRUCTURE_VERTEX_FORMATS), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | DUAL_SOURCE_BLENDING | CLIP_DISTANCES) } }) } => AdapterInfo { name: "NVIDIA GeForce RTX 5060 Laptop GPU", vendor: 4318, device: 11609, device_type: DiscreteGpu, driver: "NVIDIA", driver_info: "582.05", backend: Vulkan }
+[2026-10-14T16:57:09Z INFO  brush_headless] Starting training from flat_noimages
+[2026-10-14T16:57:09Z INFO  brush_process::process] Starting process with source Path("flat_noimages")
+[2026-10-14T16:57:09Z INFO  brush_process::process] Mounted VFS with 3 files. (plys: 0)
+[2026-10-14T16:57:09Z INFO  brush_process::process] Start of view stream
+[2026-10-14T16:57:09Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T16:57:09Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T16:57:09Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T16:57:09Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T16:57:09Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 10 images
+[2026-10-14T16:57:09Z WARN  brush_dataset::formats::colmap] Image not found: frame_0001.jpg
+[2026-10-14T16:57:09Z WARN  brush_dataset::formats::colmap] Image not found: frame_0005.jpg
+[2026-10-14T16:57:09Z WARN  brush_dataset::formats::colmap] Image not found: frame_0009.jpg
+[2026-10-14T16:57:09Z WARN  brush_dataset::formats::colmap] Image not found: frame_0013.jpg
+[2026-10-14T16:57:09Z WARN  brush_dataset::formats::colmap] Image not found: frame_0017.jpg
+[2026-10-14T16:57:09Z WARN  brush_dataset::formats::colmap] Image not found: frame_0021.jpg
+[2026-10-14T16:57:09Z WARN  brush_dataset::formats::colmap] Image not found: frame_0029.jpg
+[2026-10-14T16:57:09Z WARN  brush_dataset::formats::colmap] Image not found: frame_0033.jpg
+[2026-10-14T16:57:09Z WARN  brush_dataset::formats::colmap] Image not found: frame_0037.jpg
+[2026-10-14T16:57:09Z WARN  brush_dataset::formats::colmap] Image not found: frame_0041.jpg
+[2026-10-14T16:57:09Z INFO  brush_dataset::formats::colmap] Starting from colmap points 2153
+[2026-10-14T16:57:09Z INFO  brush_dataset::formats::colmap] Created init splat from points
+[2026-10-14T16:57:09Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T16:57:09Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T16:57:09Z INFO  brush_headless] Loaded 0 training views
+[2026-10-14T16:57:09Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T16:57:09Z INFO  brush_headless] Dataset provides initial splats, using them
+
+thread 'tokio-runtime-worker' (29540) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'tokio-runtime-worker' (27752) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (31452) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (44788) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (35772) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (40280) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (9944) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (16428) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (40760) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (9920) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (26404) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (33012) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (10228) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (33616) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (42992) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (16824) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (23580) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (32460) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (10256) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (40420) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (32256) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (38276) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (42844) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (36892) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (22788) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (44228) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (43372) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (6804) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (4188) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (42780) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (16824) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+
+thread 'tokio-runtime-worker' (34184) panicked at crates\brush-dataset\src\scene_loader.rs:108:34:
+Need at least one view in dataset
+[2026-10-14T16:57:09Z INFO  cubecl_runtime::tune::tune_cache] Load autotune cache ...
+[2026-10-14T16:57:09Z INFO  cubecl_runtime::tune::tune_cache] Loaded 6 autotune cached entries
+[2026-10-14T16:57:09Z INFO  cubecl_runtime::tune::tune_cache] Load autotune cache ...
+[2026-10-14T16:57:09Z INFO  cubecl_runtime::tune::tune_cache] Loaded 4 autotune cached entries
+[2026-10-14T16:57:09Z INFO  brush_process::train_stream] Start training loop.
+
+thread 'main' (41964) panicked at crates\brush-dataset\src\scene_loader.rs:174:14:
+Somehow lost data loading channel!

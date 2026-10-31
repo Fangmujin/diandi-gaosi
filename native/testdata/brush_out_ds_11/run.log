@@ -1,0 +1,39 @@
+[2026-10-14T10:07:35Z INFO  brush_headless] Control directory: /data/local/tmp/brush_test
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T10:07:35Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T10:07:36Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T10:07:36Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T10:07:36Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T10:07:36Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T10:07:36Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T10:07:36Z INFO  cubecl_wgpu::runtime] Using adapter AdapterInfo { name: "Goldfish GFXStream (NVIDIA GeForce RTX 5060 Laptop GPU)", vendor: 4318, device: 11609, device_type: DiscreteGpu, driver: "gfxstream", driver_info: "Mesa 24.2 (git-(git-l33t9)", backend: Vulkan }
+[2026-10-14T10:07:36Z INFO  cubecl_wgpu::runtime] Created wgpu compute server on device Device { inner: Core(CoreDevice { context: ContextWgpuCore { type: "Native" }, id: Id(0,1), error_sink: Mutex { data: ErrorSink }, features: Features { features_wgpu: FeaturesWGPU(TEXTURE_FORMAT_16BIT_NORM | TEXTURE_ADAPTER_SPECIFIC_FORMAT_FEATURES | PIPELINE_STATISTICS_QUERY | TIMESTAMP_QUERY_INSIDE_ENCODERS | TIMESTAMP_QUERY_INSIDE_PASSES | TEXTURE_BINDING_ARRAY | BUFFER_BINDING_ARRAY | STORAGE_RESOURCE_BINDING_ARRAY | SAMPLED_TEXTURE_AND_STORAGE_BUFFER_ARRAY_NON_UNIFORM_INDEXING | STORAGE_TEXTURE_ARRAY_NON_UNIFORM_INDEXING | PARTIALLY_BOUND_BINDING_ARRAY | MULTI_DRAW_INDIRECT | MULTI_DRAW_INDIRECT_COUNT | PUSH_CONSTANTS | ADDRESS_MODE_CLAMP_TO_ZERO | ADDRESS_MODE_CLAMP_TO_BORDER | POLYGON_MODE_LINE | POLYGON_MODE_POINT | VERTEX_WRITABLE_STORAGE | CLEAR_TEXTURE | SPIRV_SHADER_PASSTHROUGH | MULTIVIEW | TEXTURE_ATOMIC | TEXTURE_FORMAT_NV12 | SHADER_F64 | SHADER_I16 | SHADER_PRIMITIVE_INDEX | SHADER_EARLY_DEPTH_TEST | SHADER_INT64 | SUBGROUP | SUBGROUP_VERTEX | SUBGROUP_BARRIER | PIPELINE_CACHE | SHADER_INT64_ATOMIC_MIN_MAX | SHADER_INT64_ATOMIC_ALL_OPS), features_webgpu: FeaturesWebGPU(DEPTH_CLIP_CONTROL | DEPTH32FLOAT_STENCIL8 | TEXTURE_COMPRESSION_BC | TEXTURE_COMPRESSION_BC_SLICED_3D | TEXTURE_COMPRESSION_ETC2 | TEXTURE_COMPRESSION_ASTC | TEXTURE_COMPRESSION_ASTC_SLICED_3D | TIMESTAMP_QUERY | INDIRECT_FIRST_INSTANCE | RG11B10UFLOAT_RENDERABLE | BGRA8UNORM_STORAGE | FLOAT32_FILTERABLE | DUAL_SOURCE_BLENDING | CLIP_DISTANCES) } }) } => AdapterInfo { name: "Goldfish GFXStream (NVIDIA GeForce RTX 5060 Laptop GPU)", vendor: 4318, device: 11609, device_type: DiscreteGpu, driver: "gfxstream", driver_info: "Mesa 24.2 (git-(git-l33t9)", backend: Vulkan }
+[2026-10-14T10:07:36Z INFO  brush_headless] Starting training from /data/local/tmp/brush_test/ds
+[2026-10-14T10:07:36Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/brush_test/ds")
+[2026-10-14T10:07:36Z INFO  brush_process::process] Mounted VFS with 14 files. (plys: 0)
+[2026-10-14T10:07:36Z INFO  brush_process::process] Start of view stream
+[2026-10-14T10:07:36Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T10:07:36Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T10:07:36Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T10:07:36Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 10 images
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/frame_0001.jpg"
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/frame_0005.jpg"
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/frame_0009.jpg"
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/frame_0013.jpg"
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/frame_0017.jpg"
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/frame_0021.jpg"
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/frame_0029.jpg"
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/frame_0033.jpg"
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/frame_0037.jpg"
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/frame_0041.jpg"
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Starting from colmap points 2153
+[2026-10-14T10:07:37Z INFO  brush_dataset::formats::colmap] Created init splat from points
+[2026-10-14T10:07:37Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T10:07:37Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T10:07:37Z INFO  brush_headless] Loaded 10 training views
+[2026-10-14T10:07:37Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T10:07:37Z INFO  cubecl_runtime::tune::tuner] Tuning FusedReduceAutotuneKey - ReduceKey: ReduceAutotuneKey { elem_input: Float(F32), elem_output: Float(F32), elem_acc: Float(F32), potential_line_size: 4, axis_is_contiguous: true, reduce_axis_shape: 16, reduce_count: 4096 }, FuseNumReads: 1, FuseNumWrites: 1, FuseNumOps: 1
+[2026-10-14T10:07:38Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 4096
+Error: /data/local/tmp/brush_test/ds contains only ply files; a COLMAP dataset directory is required
+EXIT=1

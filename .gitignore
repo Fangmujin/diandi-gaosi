@@ -1,0 +1,34 @@
+# ===== 编译缓存 / 中间产物（可由源码重建，见 README「未打进本包的内容」）=====
+native/brush/target/
+native/sfm/build-x86_64/
+native/sfm/build-arm64-v8a/
+native/hostrun/
+native/hostrun2/
+dist/
+
+# build/ 里同时有「构建脚本源码」和「APK 产物」，只排产物、保留脚本
+build/*.apk
+build/classes/
+build/compiled/
+build/dex/
+build/gen/
+build/*.log
+build/e2e_log*.txt
+build/hellosplat.keystore
+
+# ===== 超大第三方依赖（重建方法见 README）=====
+native/deps/
+native/opencv-install/
+
+# ===== 备份 / 临时文件 =====
+*.bak
+*.bak-*
+native/brush/.git.upstream-backup/
+
+# ===== 前端依赖 =====
+node_modules/
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini

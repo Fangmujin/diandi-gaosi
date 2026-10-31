@@ -1,0 +1,11 @@
+{
+  "stage": "train",
+  "stageName": "训练",
+  "kind": "gpu",
+  "message": "训练阶段无法在当前设备上运行（进程退出码 139）",
+  "hint": "这台设备（sdk_gphone64_x86_64（模拟器））的图形驱动不支持训练所需的 GPU 计算（Vulkan）。这是设备/模拟器图形层的限制，不是应用故障：前面的抽帧与位姿重建已经跑完，请在支持 Vulkan 的真机上重新运行本步骤。模拟器上无法完成训练，重试也不会成功。",
+  "retryable": false,
+  "raw": "",
+  "projectId": "",
+  "state": "failed"
+}

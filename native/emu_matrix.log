@@ -1,0 +1,392 @@
+===== CASE A_default () =====
+[2026-10-14T07:47:10Z INFO  brush_headless] Control directory: /data/local/tmp
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T07:47:10Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T07:47:10Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T07:47:10Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T07:47:10Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T07:47:10Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T07:47:10Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T07:47:11Z WARN  wgpu_hal::vulkan::adapter] VK_EXT_memory_budget is not available.
+[2026-10-14T07:47:12Z INFO  brush_headless] Starting training from /data/local/tmp/tiny_colmap
+[2026-10-14T07:47:12Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/tiny_colmap")
+[2026-10-14T07:47:12Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T07:47:12Z INFO  brush_process::process] Start of view stream
+[2026-10-14T07:47:12Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T07:47:12Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T07:47:12Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T07:47:12Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T07:47:12Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T07:47:12Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+[2026-10-14T07:47:12Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_001.png"
+[2026-10-14T07:47:12Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_002.png"
+[2026-10-14T07:47:12Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_003.png"
+[2026-10-14T07:47:12Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_004.png"
+[2026-10-14T07:47:12Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_005.png"
+[2026-10-14T07:47:12Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T07:47:12Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T07:47:12Z INFO  brush_headless] Loaded 6 training views
+[2026-10-14T07:47:12Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T07:47:12Z INFO  brush_process::train_stream] Starting with random splat config.
+[2026-10-14T07:47:14Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 16384
+[2026-10-14T07:47:14Z ERROR wgpu::backend::wgpu_core] Handling wgpu errors as fatal by default
+
+thread 'main' (1933) panicked at C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu\src\backend\wgpu_core.rs:1382:26:
+wgpu error: Validation Error
+
+Caused by:
+  In Device::create_compute_pipeline, label = 'reduce_kernel_f32_f32_f32'
+    Error matching shader requirements against the pipeline
+      Shader entry point's workgroup size [128, 8, 1] (1024 total invocations) must be less or equal to the per-dimension limit [256, 256, 64] and the total invocation limit 256
+
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'main' (1933) panicked at C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-ir\src\handle.rs:78:32:
+Should have handle for tensor TensorId { value: 0 }
+stack backtrace:
+   0:     0x619ab21b8591 - <unknown>
+   1:     0x619ab21d33ca - <unknown>
+   2:     0x619ab21bf21c - <unknown>
+   3:     0x619ab219c92c - <unknown>
+   4:     0x619ab21b2587 - <unknown>
+   5:     0x619ab21b28f2 - <unknown>
+   6:     0x619ab219c9f2 - <unknown>
+   7:     0x619ab2195ff9 - <unknown>
+   8:     0x619ab219d8ed - <unknown>
+   9:     0x619ab21d3bac - <unknown>
+  10:     0x619ab0d65e77 - <unknown>
+  11:     0x619ab0d63695 - <unknown>
+  12:     0x619ab0cfbed3 - <unknown>
+  13:     0x619ab0b138e6 - <unknown>
+  14:     0x619ab07549bc - <unknown>
+  15:     0x619ab075973b - <unknown>
+  16:     0x619ab0759793 - <unknown>
+  17:     0x619ab0759920 - <unknown>
+  18:     0x619ab0793e04 - <unknown>
+  19:     0x619ab075f71c - <unknown>
+  20:     0x619ab075f883 - <unknown>
+  21:     0x619ab0d5fca9 - <unknown>
+  22:     0x619ab0d61adf - <unknown>
+  23:     0x619ab0789cbd - <unknown>
+  24:     0x619ab0d75484 - <unknown>
+  25:     0x619ab076dc3d - <unknown>
+  26:     0x619ab07a65ea - <unknown>
+  27:     0x619ab0766a5b - <unknown>
+  28:     0x619ab005af3f - <unknown>
+  29:     0x619aaff4ec58 - <unknown>
+  30:     0x619aaff59fdd - <unknown>
+  31:     0x619aaff9ac59 - <unknown>
+  32:     0x619ab00f30c4 - <unknown>
+  33:     0x619ab00dc937 - <unknown>
+  34:     0x619aaff8f37d - <unknown>
+  35:     0x619ab006816d - <unknown>
+  36:     0x619ab00d34a7 - <unknown>
+  37:     0x619ab002e54b - <unknown>
+  38:     0x619ab00590ed - <unknown>
+  39:     0x619ab21b1765 - <unknown>
+  40:     0x619ab00dc695 - <unknown>
+  41:     0x7ab6a0a67416 - __libc_init
+
+thread 'main' (1933) panicked at /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/panicking.rs:233:5:
+panic in a destructor during cleanup
+thread caused non-unwinding panic. aborting.
+Aborted 
+--- ply: ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+
+===== CASE B_maxtasks1 (CUBECL_WGPU_MAX_TASKS=1) =====
+[2026-10-14T07:47:24Z INFO  brush_headless] Control directory: /data/local/tmp
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T07:47:24Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T07:47:25Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T07:47:25Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T07:47:25Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T07:47:25Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T07:47:25Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T07:47:25Z WARN  wgpu_hal::vulkan::adapter] VK_EXT_memory_budget is not available.
+[2026-10-14T07:47:26Z INFO  brush_headless] Starting training from /data/local/tmp/tiny_colmap
+[2026-10-14T07:47:26Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/tiny_colmap")
+[2026-10-14T07:47:26Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T07:47:26Z INFO  brush_process::process] Start of view stream
+[2026-10-14T07:47:26Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T07:47:26Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T07:47:26Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T07:47:26Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T07:47:26Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T07:47:26Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+[2026-10-14T07:47:26Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_001.png"
+[2026-10-14T07:47:26Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_002.png"
+[2026-10-14T07:47:26Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_003.png"
+[2026-10-14T07:47:26Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_004.png"
+[2026-10-14T07:47:26Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_005.png"
+[2026-10-14T07:47:26Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T07:47:26Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T07:47:26Z INFO  brush_headless] Loaded 6 training views
+[2026-10-14T07:47:26Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T07:47:26Z INFO  brush_process::train_stream] Starting with random splat config.
+[2026-10-14T07:47:29Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 16384
+[2026-10-14T07:47:29Z ERROR wgpu::backend::wgpu_core] Handling wgpu errors as fatal by default
+
+thread 'main' (2068) panicked at C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu\src\backend\wgpu_core.rs:1382:26:
+wgpu error: Validation Error
+
+Caused by:
+  In Device::create_compute_pipeline, label = 'reduce_kernel_f32_f32_f32'
+    Error matching shader requirements against the pipeline
+      Shader entry point's workgroup size [128, 8, 1] (1024 total invocations) must be less or equal to the per-dimension limit [256, 256, 64] and the total invocation limit 256
+
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'main' (2068) panicked at C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-ir\src\handle.rs:78:32:
+Should have handle for tensor TensorId { value: 0 }
+stack backtrace:
+   0:     0x5a68b17e4591 - <unknown>
+   1:     0x5a68b17ff3ca - <unknown>
+   2:     0x5a68b17eb21c - <unknown>
+   3:     0x5a68b17c892c - <unknown>
+   4:     0x5a68b17de587 - <unknown>
+   5:     0x5a68b17de8f2 - <unknown>
+   6:     0x5a68b17c89f2 - <unknown>
+   7:     0x5a68b17c1ff9 - <unknown>
+   8:     0x5a68b17c98ed - <unknown>
+   9:     0x5a68b17ffbac - <unknown>
+  10:     0x5a68b0391e77 - <unknown>
+  11:     0x5a68b038f695 - <unknown>
+  12:     0x5a68b0327ed3 - <unknown>
+  13:     0x5a68b013f8e6 - <unknown>
+  14:     0x5a68afd809bc - <unknown>
+  15:     0x5a68afd8573b - <unknown>
+  16:     0x5a68afd85793 - <unknown>
+  17:     0x5a68afd85920 - <unknown>
+  18:     0x5a68afdbfe04 - <unknown>
+  19:     0x5a68afd8b71c - <unknown>
+  20:     0x5a68afd8b883 - <unknown>
+  21:     0x5a68b038bca9 - <unknown>
+  22:     0x5a68b038dadf - <unknown>
+  23:     0x5a68afdb5cbd - <unknown>
+  24:     0x5a68b03a1484 - <unknown>
+  25:     0x5a68afd99c3d - <unknown>
+  26:     0x5a68afdd25ea - <unknown>
+  27:     0x5a68afd92a5b - <unknown>
+  28:     0x5a68af686f3f - <unknown>
+  29:     0x5a68af57ac58 - <unknown>
+  30:     0x5a68af585fdd - <unknown>
+  31:     0x5a68af5c6c59 - <unknown>
+  32:     0x5a68af71f0c4 - <unknown>
+  33:     0x5a68af708937 - <unknown>
+  34:     0x5a68af5bb37d - <unknown>
+  35:     0x5a68af69416d - <unknown>
+  36:     0x5a68af6ff4a7 - <unknown>
+  37:     0x5a68af65a54b - <unknown>
+  38:     0x5a68af6850ed - <unknown>
+  39:     0x5a68b17dd765 - <unknown>
+  40:     0x5a68af708695 - <unknown>
+  41:     0x762e2ca9b416 - __libc_init
+
+thread 'main' (2068) panicked at /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/panicking.rs:233:5:
+panic in a destructor during cleanup
+thread caused non-unwinding panic. aborting.
+Aborted 
+--- ply: ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+
+===== CASE C_maxtasks1_autotune0 (CUBECL_WGPU_MAX_TASKS=1 CUBECL_AUTOTUNE_LEVEL=0) =====
+[2026-10-14T07:47:38Z INFO  brush_headless] Control directory: /data/local/tmp
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T07:47:38Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T07:47:38Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T07:47:38Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T07:47:38Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T07:47:38Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T07:47:38Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T07:47:39Z WARN  wgpu_hal::vulkan::adapter] VK_EXT_memory_budget is not available.
+[2026-10-14T07:47:39Z INFO  brush_headless] Starting training from /data/local/tmp/tiny_colmap
+[2026-10-14T07:47:39Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/tiny_colmap")
+[2026-10-14T07:47:39Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T07:47:39Z INFO  brush_process::process] Start of view stream
+[2026-10-14T07:47:39Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T07:47:39Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T07:47:39Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T07:47:39Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T07:47:39Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T07:47:39Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+[2026-10-14T07:47:39Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_001.png"
+[2026-10-14T07:47:39Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_002.png"
+[2026-10-14T07:47:39Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_003.png"
+[2026-10-14T07:47:39Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_004.png"
+[2026-10-14T07:47:39Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_005.png"
+[2026-10-14T07:47:39Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T07:47:39Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T07:47:39Z INFO  brush_headless] Loaded 6 training views
+[2026-10-14T07:47:39Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T07:47:39Z INFO  brush_process::train_stream] Starting with random splat config.
+[2026-10-14T07:47:41Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 16384
+[2026-10-14T07:47:41Z ERROR wgpu::backend::wgpu_core] Handling wgpu errors as fatal by default
+
+thread 'main' (2228) panicked at C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu\src\backend\wgpu_core.rs:1382:26:
+wgpu error: Validation Error
+
+Caused by:
+  In Device::create_compute_pipeline, label = 'reduce_kernel_f32_f32_f32'
+    Error matching shader requirements against the pipeline
+      Shader entry point's workgroup size [128, 8, 1] (1024 total invocations) must be less or equal to the per-dimension limit [256, 256, 64] and the total invocation limit 256
+
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'main' (2228) panicked at C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-ir\src\handle.rs:78:32:
+Should have handle for tensor TensorId { value: 0 }
+stack backtrace:
+   0:     0x5ecda3c7c591 - <unknown>
+   1:     0x5ecda3c973ca - <unknown>
+   2:     0x5ecda3c8321c - <unknown>
+   3:     0x5ecda3c6092c - <unknown>
+   4:     0x5ecda3c76587 - <unknown>
+   5:     0x5ecda3c768f2 - <unknown>
+   6:     0x5ecda3c609f2 - <unknown>
+   7:     0x5ecda3c59ff9 - <unknown>
+   8:     0x5ecda3c618ed - <unknown>
+   9:     0x5ecda3c97bac - <unknown>
+  10:     0x5ecda2829e77 - <unknown>
+  11:     0x5ecda2827695 - <unknown>
+  12:     0x5ecda27bfed3 - <unknown>
+  13:     0x5ecda25d78e6 - <unknown>
+  14:     0x5ecda22189bc - <unknown>
+  15:     0x5ecda221d73b - <unknown>
+  16:     0x5ecda221d793 - <unknown>
+  17:     0x5ecda221d920 - <unknown>
+  18:     0x5ecda2257e04 - <unknown>
+  19:     0x5ecda222371c - <unknown>
+  20:     0x5ecda2223883 - <unknown>
+  21:     0x5ecda2823ca9 - <unknown>
+  22:     0x5ecda2825adf - <unknown>
+  23:     0x5ecda224dcbd - <unknown>
+  24:     0x5ecda2839484 - <unknown>
+  25:     0x5ecda2231c3d - <unknown>
+  26:     0x5ecda226a5ea - <unknown>
+  27:     0x5ecda222aa5b - <unknown>
+  28:     0x5ecda1b1ef3f - <unknown>
+  29:     0x5ecda1a12c58 - <unknown>
+  30:     0x5ecda1a1dfdd - <unknown>
+  31:     0x5ecda1a5ec59 - <unknown>
+  32:     0x5ecda1bb70c4 - <unknown>
+  33:     0x5ecda1ba0937 - <unknown>
+  34:     0x5ecda1a5337d - <unknown>
+  35:     0x5ecda1b2c16d - <unknown>
+  36:     0x5ecda1b974a7 - <unknown>
+  37:     0x5ecda1af254b - <unknown>
+  38:     0x5ecda1b1d0ed - <unknown>
+  39:     0x5ecda3c75765 - <unknown>
+  40:     0x5ecda1ba0695 - <unknown>
+  41:     0x7a34528ff416 - __libc_init
+
+thread 'main' (2228) panicked at /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/panicking.rs:233:5:
+panic in a destructor during cleanup
+thread caused non-unwinding panic. aborting.
+Aborted 
+--- ply: ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+
+===== CASE D_maxtasks4_autotune0 (CUBECL_WGPU_MAX_TASKS=4 CUBECL_AUTOTUNE_LEVEL=0) =====
+[2026-10-14T07:47:50Z INFO  brush_headless] Control directory: /data/local/tmp
+{"iter":0,"total":30,"splats":0,"loss":0.0,"elapsed_ms":0,"eta_sec":0.0,"stage":"training"}
+[2026-10-14T07:47:50Z INFO  brush_headless] Initializing GPU device
+[2026-10-14T07:47:51Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_acquire_drm_display
+[2026-10-14T07:47:51Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_direct_mode_display
+[2026-10-14T07:47:51Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_display
+[2026-10-14T07:47:51Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_EXT_physical_device_drm
+[2026-10-14T07:47:51Z WARN  wgpu_hal::vulkan::instance] Unable to find extension: VK_KHR_get_display_properties2
+[2026-10-14T07:47:51Z WARN  wgpu_hal::vulkan::adapter] VK_EXT_memory_budget is not available.
+[2026-10-14T07:47:52Z INFO  brush_headless] Starting training from /data/local/tmp/tiny_colmap
+[2026-10-14T07:47:52Z INFO  brush_process::process] Starting process with source Path("/data/local/tmp/tiny_colmap")
+[2026-10-14T07:47:52Z INFO  brush_process::process] Mounted VFS with 8 files. (plys: 0)
+[2026-10-14T07:47:52Z INFO  brush_process::process] Start of view stream
+[2026-10-14T07:47:52Z INFO  brush_process::train_stream] Start of training stream
+[2026-10-14T07:47:52Z INFO  brush_process::train_stream] Using seed 42
+[2026-10-14T07:47:52Z INFO  brush_process::train_stream] Loading dataset
+[2026-10-14T07:47:52Z INFO  brush_dataset::formats::colmap] Loading colmap dataset
+[2026-10-14T07:47:52Z INFO  brush_dataset::formats::colmap] Loading colmap dataset with 6 images
+[2026-10-14T07:47:52Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_000.png"
+[2026-10-14T07:47:52Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_001.png"
+[2026-10-14T07:47:52Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_002.png"
+[2026-10-14T07:47:52Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_003.png"
+[2026-10-14T07:47:52Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_004.png"
+[2026-10-14T07:47:52Z INFO  brush_dataset::formats::colmap] Loaded COLMAP image at path "images/view_005.png"
+[2026-10-14T07:47:52Z INFO  brush_process::train_stream] Log scene to rerun
+[2026-10-14T07:47:52Z INFO  brush_process::train_stream] Dataset loaded
+[2026-10-14T07:47:52Z INFO  brush_headless] Loaded 6 training views
+[2026-10-14T07:47:52Z INFO  brush_process::train_stream] Loading initial splats if any.
+[2026-10-14T07:47:52Z INFO  brush_process::train_stream] Starting with random splat config.
+[2026-10-14T07:47:53Z INFO  cubecl_runtime::tune::tuner] Tuning ReduceAutotuneKey - ElemInput: Float(F32), ElemOutput: Float(F32), ElemAcc: Float(F32), PotentialLineSize: 4, AxisIsContiguous: true, ReduceAxisShape: 16, ReduceCount: 16384
+[2026-10-14T07:47:53Z ERROR wgpu::backend::wgpu_core] Handling wgpu errors as fatal by default
+
+thread 'main' (2399) panicked at C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\wgpu\wgpu\src\backend\wgpu_core.rs:1382:26:
+wgpu error: Validation Error
+
+Caused by:
+  In Device::create_compute_pipeline, label = 'reduce_kernel_f32_f32_f32'
+    Error matching shader requirements against the pipeline
+      Shader entry point's workgroup size [128, 8, 1] (1024 total invocations) must be less or equal to the per-dimension limit [256, 256, 64] and the total invocation limit 256
+
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread 'main' (2399) panicked at C:\Users\28928\WorkBuddy\2026-10-11-15-32-41\diandi-gaosi\native\deps\burn\crates\burn-ir\src\handle.rs:78:32:
+Should have handle for tensor TensorId { value: 0 }
+stack backtrace:
+   0:     0x5946ca768591 - <unknown>
+   1:     0x5946ca7833ca - <unknown>
+   2:     0x5946ca76f21c - <unknown>
+   3:     0x5946ca74c92c - <unknown>
+   4:     0x5946ca762587 - <unknown>
+   5:     0x5946ca7628f2 - <unknown>
+   6:     0x5946ca74c9f2 - <unknown>
+   7:     0x5946ca745ff9 - <unknown>
+   8:     0x5946ca74d8ed - <unknown>
+   9:     0x5946ca783bac - <unknown>
+  10:     0x5946c9315e77 - <unknown>
+  11:     0x5946c9313695 - <unknown>
+  12:     0x5946c92abed3 - <unknown>
+  13:     0x5946c90c38e6 - <unknown>
+  14:     0x5946c8d049bc - <unknown>
+  15:     0x5946c8d0973b - <unknown>
+  16:     0x5946c8d09793 - <unknown>
+  17:     0x5946c8d09920 - <unknown>
+  18:     0x5946c8d43e04 - <unknown>
+  19:     0x5946c8d0f71c - <unknown>
+  20:     0x5946c8d0f883 - <unknown>
+  21:     0x5946c930fca9 - <unknown>
+  22:     0x5946c9311adf - <unknown>
+  23:     0x5946c8d39cbd - <unknown>
+  24:     0x5946c9325484 - <unknown>
+  25:     0x5946c8d1dc3d - <unknown>
+  26:     0x5946c8d565ea - <unknown>
+  27:     0x5946c8d16a5b - <unknown>
+  28:     0x5946c860af3f - <unknown>
+  29:     0x5946c84fec58 - <unknown>
+  30:     0x5946c8509fdd - <unknown>
+  31:     0x5946c854ac59 - <unknown>
+  32:     0x5946c86a30c4 - <unknown>
+  33:     0x5946c868c937 - <unknown>
+  34:     0x5946c853f37d - <unknown>
+  35:     0x5946c861816d - <unknown>
+  36:     0x5946c86834a7 - <unknown>
+  37:     0x5946c85de54b - <unknown>
+  38:     0x5946c86090ed - <unknown>
+  39:     0x5946ca761765 - <unknown>
+  40:     0x5946c868c695 - <unknown>
+  41:     0x73c73733a416 - __libc_init
+
+thread 'main' (2399) panicked at /rustc/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/panicking.rs:233:5:
+panic in a destructor during cleanup
+thread caused non-unwinding panic. aborting.
+Aborted 
+--- ply: ---
+ls: /data/local/tmp/out.ply: No such file or directory
+head: /data/local/tmp/out.ply: No such file or directory
+
